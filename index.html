@@ -3,32 +3,140 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Investor Experts</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Investor Experts | Invest in Future</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;font-family:Poppins;background:#faf8f3;color:#1a1a1a}
+
+body{
+margin:0;
+font-family:Poppins;
+background:#f8f5f0;
+color:#1a1a1a;
+}
 
 /* NAVBAR */
-nav{display:flex;justify-content:space-between;align-items:center;padding:15px 5%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000}
-nav ul{display:flex;gap:22px;list-style:none}
-nav a{text-decoration:none;color:#1a1a1a;font-weight:500}
 
-.btn{background:#c5a46d;color:#fff;padding:10px 18px;border-radius:4px;text-decoration:none}
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 6%;
+background:#ffffff;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 2px 12px rgba(0,0,0,0.05);
+}
 
-.hero{text-align:center;padding:80px 20px}
-.hero h1{font-family:"Playfair Display";font-size:46px}
+nav ul{
+display:flex;
+gap:28px;
+list-style:none;
+}
 
-.stats{display:flex;justify-content:center;gap:40px;margin-top:40px;flex-wrap:wrap}
-.stat h2{color:#c5a46d;font-size:34px}
+nav a{
+text-decoration:none;
+color:#1a1a1a;
+font-weight:500;
+}
 
-.section{padding:70px 5%;text-align:center}
+.btn{
+background:#c5a46d;
+color:#fff;
+padding:12px 22px;
+border-radius:4px;
+text-decoration:none;
+}
 
-/* TICKERS */
-.ticker{background:#fff;border-bottom:1px solid #eee}
+/* HERO */
+
+.hero{
+padding:110px 20px;
+text-align:center;
+background:linear-gradient(to bottom,#ffffff,#f8f5f0);
+}
+
+.hero h1{
+font-family:Playfair Display;
+font-size:52px;
+margin-bottom:15px;
+}
+
+.stats{
+display:flex;
+justify-content:center;
+gap:60px;
+margin-top:50px;
+flex-wrap:wrap;
+}
+
+.stat{
+background:#ffffff;
+padding:30px 40px;
+border-radius:10px;
+box-shadow:0 4px 18px rgba(0,0,0,0.05);
+}
+
+.stat h2{
+color:#c5a46d;
+font-size:34px;
+margin:0;
+}
+
+/* SECTIONS */
+
+.section{
+padding:90px 6%;
+text-align:center;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.card{
+background:#ffffff;
+padding:35px;
+border-radius:10px;
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* TRUST */
+
+.trust{
+background:#ffffff;
+}
+
+/* FORM */
+
+form{
+max-width:500px;
+margin:auto;
+}
+
+input,select{
+width:100%;
+padding:14px;
+margin:10px 0;
+border-radius:4px;
+border:1px solid #ddd;
+}
+
+footer{
+background:#111;
+color:#fff;
+text-align:center;
+padding:40px 20px;
+}
 
 /* WHATSAPP */
+
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -39,44 +147,24 @@ padding:14px 16px;
 border-radius:50%;
 font-size:22px;
 text-decoration:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* FORM */
-input,select{
-width:100%;
-padding:12px;
-margin:8px 0;
-border:1px solid #ddd;
-border-radius:4px;
-}
-
-footer{background:#111;color:#fff;padding:40px 5%;text-align:center}
 </style>
 </head>
 
 <body>
 
-<!-- NIFTY 50 TICKER -->
+<!-- TICKER 1 -->
 <div class="ticker">
 <script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
 {
-"symbols":[
-{"proName":"NSE:RELIANCE"},{"proName":"NSE:TCS"},{"proName":"NSE:HDFCBANK"},
-{"proName":"NSE:INFY"},{"proName":"NSE:ICICIBANK"},{"proName":"NSE:HINDUNILVR"},
-{"proName":"NSE:SBIN"},{"proName":"NSE:BHARTIARTL"},{"proName":"NSE:KOTAKBANK"},
-{"proName":"NSE:LT"},{"proName":"NSE:HCLTECH"},{"proName":"NSE:AXISBANK"},
-{"proName":"NSE:ASIANPAINT"},{"proName":"NSE:MARUTI"},{"proName":"NSE:SUNPHARMA"}
-],
-"showSymbolLogo":true,
-"colorTheme":"light",
-"isTransparent":true,
-"displayMode":"adaptive"
+"symbols":[{"proName":"NSE:RELIANCE"},{"proName":"NSE:TCS"},{"proName":"NSE:HDFCBANK"},{"proName":"NSE:INFY"},{"proName":"NSE:ICICIBANK"},{"proName":"NSE:SBIN"}],
+"colorTheme":"light","isTransparent":true,"displayMode":"adaptive"
 }
 </script>
 </div>
 
-<!-- SECOND TICKER -->
+<!-- TICKER 2 -->
 <div class="ticker">
 <script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
 {
@@ -87,9 +175,7 @@ footer{background:#111;color:#fff;padding:40px 5%;text-align:center}
 {"proName":"MCX:GOLD1!","title":"MCX GOLD"},
 {"proName":"FX_IDC:USDINR","title":"USDINR"}
 ],
-"colorTheme":"light",
-"isTransparent":true,
-"displayMode":"adaptive"
+"colorTheme":"light","isTransparent":true,"displayMode":"adaptive"
 }
 </script>
 </div>
@@ -97,89 +183,90 @@ footer{background:#111;color:#fff;padding:40px 5%;text-align:center}
 <!-- NAVBAR -->
 <nav>
 <h2>Investor Experts</h2>
+
 <ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="products.html">Products</a></li>
-<li><a href="portfolio-management.html">Portfolio</a></li>
-<li><a href="insights.html">Insights</a></li>
-<li><a href="team.html">Team</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Portfolio</a></li>
+<li><a href="#">Insights</a></li>
+<li><a href="#">Team</a></li>
+<li><a href="#">Contact</a></li>
 </ul>
-<a class="btn" href="#form">Book Consultation</a>
+
+<a class="btn" href="#">Book Consultation</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
+
 <h1>Build Wealth With Discipline & Strategy</h1>
 <p>15+ Years Experience | ₹200Cr+ AUM | 2100+ Clients</p>
 
 <div class="stats">
-<div class="stat"><h2 class="counter">15</h2><p>Years Experience</p></div>
-<div class="stat"><h2 class="counter">200</h2><p>Cr AUM</p></div>
-<div class="stat"><h2 class="counter">2100</h2><p>Clients</p></div>
+
+<div class="stat"><h2>15+</h2><p>Years Experience</p></div>
+<div class="stat"><h2>₹200Cr+</h2><p>AUM Managed</p></div>
+<div class="stat"><h2>2100+</h2><p>Happy Clients</p></div>
+
 </div>
+
 </section>
 
 <!-- SERVICES -->
 <section class="section">
-<h2>Our Services</h2>
-<p>Stock Broking | PMS | Mutual Funds | Financial Planning | Bonds | IPO</p>
+
+<h2>Our Core Services</h2>
+
+<div class="cards">
+
+<div class="card">Stock Broking</div>
+<div class="card">Portfolio Management (PMS)</div>
+<div class="card">Financial Planning</div>
+<div class="card">Mutual Fund Advisory</div>
+
+</div>
+
 </section>
 
-<!-- MOTILAL -->
-<section class="section">
-<h3>Motilal Oswal Franchise Partner</h3>
+<!-- TRUST -->
+<section class="section trust">
+
+<h2>Motilal Oswal Franchise Partner</h2>
 <img src="motilal.png" width="220">
+
 </section>
 
-<!-- LEAD FORM -->
-<section id="form" class="section">
+<!-- FORM -->
+<section class="section">
+
 <h2>Book Free Consultation</h2>
 
 <form>
-<input type="text" placeholder="Your Name" required>
-<input type="tel" placeholder="Mobile Number" required>
+<input type="text" placeholder="Your Name">
+<input type="tel" placeholder="Mobile Number">
 
 <select>
 <option>Select Service</option>
-<option>Portfolio Management</option>
+<option>PMS</option>
 <option>Mutual Funds</option>
 <option>Financial Planning</option>
-<option>Stock Broking</option>
 </select>
 
 <button class="btn">Submit</button>
 </form>
+
 </section>
 
 <footer>
+
 <p>📞 8386002000 | ✉ info@investoexperts.com</p>
 <p>Jaipur, Rajasthan</p>
-<p>Motilal Oswal Franchise Partner | AMFI Registered</p>
+<p>Motilal Oswal Franchise Partner</p>
+
 </footer>
 
-<!-- WHATSAPP -->
 <a href="https://wa.me/918386002000" class="whatsapp">💬</a>
-
-<!-- COUNTER SCRIPT -->
-<script>
-const counters=document.querySelectorAll('.counter');
-counters.forEach(counter=>{
-let update=()=>{
-let target=+counter.getAttribute('data-target')||counter.innerText;
-let count=+counter.innerText;
-let speed=200;
-let inc=target/speed;
-if(count<target){
-counter.innerText=Math.ceil(count+inc);
-setTimeout(update,10);
-}
-}
-update();
-});
-</script>
 
 </body>
 </html>
