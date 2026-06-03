@@ -427,11 +427,11 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
   top:0;
   left:0;
   width:100%;
+  height:46px;
   background:#ffffff;
   border-bottom:2px solid #C8973A;
   overflow:hidden;
   z-index:1001;
-  height:46px;
   display:flex;
   align-items:center;
 }
@@ -440,10 +440,9 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
   display:flex;
   gap:40px;
   white-space:nowrap;
-  animation:scrollTicker 40s linear infinite;
-  font-weight:600;
+  animation:scrollTicker 35s linear infinite;
   font-size:15px;
-  color:#111;
+  font-weight:600;
 }
 
 .ticker-item{
@@ -471,56 +470,60 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
 </style>
 
 <script>
-const stocks = [
-  "AAPL",
-  "MSFT",
-  "GOOGL"
+const symbols = [
+  "RELIANCE.NS",
+  "TCS.NS",
+  "INFY.NS",
+  "HDFCBANK.NS",
+  "ICICIBANK.NS",
+  "^NSEI",
+  "^BSESN"
 ];
 
-const apiKey = "BhVG70n65w9XaFrhMwHJnNm8aWzZrlzM";
+async function loadTicker(){
 
-async function loadTicker() {
+  try{
 
-  let html = "";
+    const response = await fetch(
+      `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${symbols.join(",")}`
+    );
 
-  for (const stock of stocks) {
+    const data = await response.json();
 
-    try {
+    const results = data.quoteResponse.result;
 
-      const response = await fetch(
-        `https://financialmodelingprep.com/api/v3/quote/${stock}?apikey=${apiKey}`
-      );
+    let html = "";
 
-      const data = await response.json();
+    results.forEach(stock => {
 
-      if (data && data.length > 0) {
+      const changeClass =
+        stock.regularMarketChange >= 0 ? "up" : "down";
 
-        const item = data[0];
+      html += `
+        <div class="ticker-item">
+          <span>${stock.symbol}</span>
+          <span>${stock.regularMarketPrice}</span>
+          <span class="${changeClass}">
+            ${stock.regularMarketChange.toFixed(2)}
+          </span>
+        </div>
+      `;
+    });
 
-        const changeClass = item.change >= 0 ? "up" : "down";
+    document.getElementById("ticker-track").innerHTML = html;
 
-        html += `
-          <div class="ticker-item">
-            <span>${item.symbol}</span>
-            <span>${item.price}</span>
-            <span class="${changeClass}">
-              ${item.change.toFixed(2)}
-            </span>
-          </div>
-        `;
-      }
+  }catch(error){
 
-    } catch (e) {
-      console.log(e);
-    }
+    document.getElementById("ticker-track").innerHTML =
+      "Unable to load market data";
+
+    console.log(error);
   }
-
-  document.getElementById("ticker-track").innerHTML = html;
 }
 
 loadTicker();
 
-setInterval(loadTicker, 30000);
+setInterval(loadTicker,30000);
 </script>
 
 
