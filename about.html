@@ -415,40 +415,69 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
 </style>
 </head>
 <body>
- <div class="tradingview-widget-container">
+<div class="tradingview-widget-container ticker-container">
   <div class="tradingview-widget-container__widget"></div>
 
   <script type="text/javascript"
-  src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js"
+  src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
   async>
   {
-    "colorTheme": "light",
-    "dateRange": "1D",
-    "showChart": true,
-    "locale": "en",
-    "width": "100%",
-    "height": "500",
-    "largeChartUrl": "",
-    "isTransparent": false,
-    "showSymbolLogo": true,
-    "tabs": [
+    "symbols": [
       {
-        "title": "Indian Markets",
-        "symbols": [
-          {"s": "BSE:SENSEX", "d": "SENSEX"},
-          {"s": "BSE:RELIANCE", "d": "RELIANCE"},
-          {"s": "BSE:TCS", "d": "TCS"},
-          {"s": "BSE:HDFCBANK", "d": "HDFC BANK"},
-          {"s": "BSE:INFY", "d": "INFOSYS"},
-          {"s": "BSE:ICICIBANK", "d": "ICICI BANK"},
-          {"s": "BSE:SBIN", "d": "SBI"},
-          {"s": "BSE:ITC", "d": "ITC"}
-        ]
+        "description": "SENSEX",
+        "proName": "BSE:SENSEX"
+      },
+      {
+        "description": "RELIANCE",
+        "proName": "BSE:RELIANCE"
+      },
+      {
+        "description": "TCS",
+        "proName": "BSE:TCS"
+      },
+      {
+        "description": "HDFC BANK",
+        "proName": "BSE:HDFCBANK"
+      },
+      {
+        "description": "INFOSYS",
+        "proName": "BSE:INFY"
+      },
+      {
+        "description": "ICICI BANK",
+        "proName": "BSE:ICICIBANK"
+      },
+      {
+        "description": "SBI",
+        "proName": "BSE:SBIN"
+      },
+      {
+        "description": "ITC",
+        "proName": "BSE:ITC"
       }
-    ]
+    ],
+    "showSymbolLogo": false,
+    "isTransparent": false,
+    "displayMode": "adaptive",
+    "colorTheme": "light",
+    "locale": "en"
   }
   </script>
 </div>
+
+<style>
+.ticker-container{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  border-bottom:2px solid #C8973A;
+}
+body{
+  padding-top:46px;
+}
+</style>
 
 <nav id="nav">
   <div class="nav-brand">
