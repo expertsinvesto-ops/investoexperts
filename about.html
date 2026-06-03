@@ -415,117 +415,40 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
 </style>
 </head>
 <body>
-  <div class="custom-ticker">
-  <div class="ticker-track" id="ticker-track">
-    Loading market data...
-  </div>
+ <div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+
+  <script type="text/javascript"
+  src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js"
+  async>
+  {
+    "colorTheme": "light",
+    "dateRange": "1D",
+    "showChart": true,
+    "locale": "en",
+    "width": "100%",
+    "height": "500",
+    "largeChartUrl": "",
+    "isTransparent": false,
+    "showSymbolLogo": true,
+    "tabs": [
+      {
+        "title": "Indian Markets",
+        "symbols": [
+          {"s": "BSE:SENSEX", "d": "SENSEX"},
+          {"s": "BSE:RELIANCE", "d": "RELIANCE"},
+          {"s": "BSE:TCS", "d": "TCS"},
+          {"s": "BSE:HDFCBANK", "d": "HDFC BANK"},
+          {"s": "BSE:INFY", "d": "INFOSYS"},
+          {"s": "BSE:ICICIBANK", "d": "ICICI BANK"},
+          {"s": "BSE:SBIN", "d": "SBI"},
+          {"s": "BSE:ITC", "d": "ITC"}
+        ]
+      }
+    ]
+  }
+  </script>
 </div>
-
-<style>
-.custom-ticker{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:46px;
-  background:#ffffff;
-  border-bottom:2px solid #C8973A;
-  overflow:hidden;
-  z-index:1001;
-  display:flex;
-  align-items:center;
-}
-
-.ticker-track{
-  display:flex;
-  gap:40px;
-  white-space:nowrap;
-  animation:scrollTicker 35s linear infinite;
-  font-size:15px;
-  font-weight:600;
-}
-
-.ticker-item{
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-
-.up{
-  color:green;
-}
-
-.down{
-  color:red;
-}
-
-@keyframes scrollTicker{
-  0%{
-    transform:translateX(100%);
-  }
-  100%{
-    transform:translateX(-100%);
-  }
-}
-</style>
-
-<script>
-const symbols = [
-  "RELIANCE.NS",
-  "TCS.NS",
-  "INFY.NS",
-  "HDFCBANK.NS",
-  "ICICIBANK.NS",
-  "^NSEI",
-  "^BSESN"
-];
-
-async function loadTicker(){
-
-  try{
-
-    const response = await fetch(
-      `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${symbols.join(",")}`
-    );
-
-    const data = await response.json();
-
-    const results = data.quoteResponse.result;
-
-    let html = "";
-
-    results.forEach(stock => {
-
-      const changeClass =
-        stock.regularMarketChange >= 0 ? "up" : "down";
-
-      html += `
-        <div class="ticker-item">
-          <span>${stock.symbol}</span>
-          <span>${stock.regularMarketPrice}</span>
-          <span class="${changeClass}">
-            ${stock.regularMarketChange.toFixed(2)}
-          </span>
-        </div>
-      `;
-    });
-
-    document.getElementById("ticker-track").innerHTML = html;
-
-  }catch(error){
-
-    document.getElementById("ticker-track").innerHTML =
-      "Unable to load market data";
-
-    console.log(error);
-  }
-}
-
-loadTicker();
-
-setInterval(loadTicker,30000);
-</script>
-
 
 <nav id="nav">
   <div class="nav-brand">
