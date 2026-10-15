@@ -418,6 +418,52 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
   .wwwork-grid{grid-template-columns:1fr}
   .assoc-items{gap:20px}
 }
+
+/* LIGHT FINTECH HOMEPAGE HERO */
+.hero{min-height:clamp(560px,70vh,760px);padding:18px 0;background:radial-gradient(ellipse at 78% 42%,rgba(200,151,58,.11),transparent 42%),linear-gradient(125deg,#fff 0%,var(--cream) 58%,#F7F0E4 100%)}
+.hero-dots{opacity:.32}
+.hero-orb1{width:620px;height:620px;top:-150px;right:-100px;background:radial-gradient(circle,rgba(200,151,58,.14),transparent 68%)}
+.hero-orb2{width:360px;height:360px;bottom:-130px;left:-140px;background:radial-gradient(circle,rgba(155,28,46,.07),transparent 68%)}
+.hero-inner{max-width:1400px;width:100%;padding:42px 5%}
+.hero-layout{display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);align-items:center;gap:clamp(30px,5vw,74px)}
+.hero-copy{position:relative;z-index:2;max-width:610px}
+.hero-title{font-size:clamp(3rem,5.2vw,4.85rem);line-height:1.02;max-width:13ch;margin-bottom:18px}
+.hero-sub{max-width:540px;margin-bottom:30px;font-size:1.02rem;line-height:1.75}
+.hero-visual{position:relative;isolation:isolate;padding:13px;border-radius:30px;background:rgba(255,255,255,.66);border:1px solid rgba(200,151,58,.22);box-shadow:0 28px 72px rgba(80,50,10,.14),0 3px 12px rgba(80,50,10,.06);animation:heroVisualIn .85s cubic-bezier(.2,.7,.2,1) both}
+.hero-visual::before{content:"";position:absolute;z-index:-1;inset:9% -7% -8% 12%;border-radius:34px;background:radial-gradient(ellipse,rgba(200,151,58,.20),rgba(155,28,46,.05) 48%,transparent 72%);filter:blur(18px);pointer-events:none}
+.hero-image-frame{position:relative;overflow:hidden;border-radius:21px;background:var(--cream2);line-height:0}
+.hero-art{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.hero-visual:hover .hero-art{transform:scale(1.025)}
+.hero-float-card{position:absolute;left:-24px;bottom:34px;display:flex;align-items:center;gap:12px;padding:13px 18px;border-radius:12px;background:rgba(255,255,255,.96);border:1px solid rgba(200,151,58,.22);box-shadow:0 12px 34px rgba(60,46,24,.16);animation:heroCardFloat 5.5s ease-in-out infinite}
+.hero-float-mark{width:34px;height:34px;display:flex;align-items:flex-end;justify-content:center;gap:3px;padding:7px;border-radius:9px;background:linear-gradient(145deg,rgba(200,151,58,.17),rgba(155,28,46,.08))}
+.hero-float-mark i{display:block;width:4px;border-radius:4px;background:linear-gradient(180deg,var(--gold2),var(--crimson))}
+.hero-float-mark i:nth-child(1){height:9px}.hero-float-mark i:nth-child(2){height:15px}.hero-float-mark i:nth-child(3){height:12px}
+.hero-float-copy{display:flex;flex-direction:column;gap:2px}
+.hero-float-copy small{font-size:.57rem;font-weight:700;letter-spacing:.13em;color:var(--gold3)}
+.hero-float-copy strong{font-family:var(--ff-head);font-size:.96rem;line-height:1.2;color:var(--charcoal)}
+@keyframes heroVisualIn{from{opacity:0;transform:translateY(22px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes heroCardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(max-width:940px){
+  .hero{min-height:0;padding:12px 0 50px}
+  .hero-layout{grid-template-columns:1fr;gap:34px}
+  .hero-copy{max-width:740px}
+  .hero-title{font-size:clamp(3.15rem,8vw,4.75rem);max-width:15ch}
+  .hero-visual{width:min(100%,760px);margin:0 auto}
+}
+@media(max-width:520px){
+  .hero-inner{padding:48px 5% 24px}
+  .hero-layout{gap:26px}
+  .hero-badge{max-width:100%;padding:6px 11px}
+  .hero-badge span{font-size:.58rem;letter-spacing:.1em}
+  .hero-title{font-size:clamp(2.8rem,12vw,3.65rem);max-width:13ch}
+  .hero-sub{font-size:.96rem;margin-bottom:24px}
+  .hero-visual{padding:8px;border-radius:22px}
+  .hero-image-frame{border-radius:15px}
+  .hero-float-card{left:15px;bottom:16px;padding:9px 12px;gap:8px}
+  .hero-float-mark{width:30px;height:30px}
+  .hero-float-copy strong{font-size:.85rem}
+}
+
 </style>
 </head>
 <body>
@@ -521,16 +567,27 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
   </div>
 </div>
 <section class="hero" id="home">
-  <div class="hero-dots"></div>
-  <div class="hero-orb1"></div>
-  <div class="hero-orb2"></div>
-  <div class="container hero-inner">
-    <div class="hero-badge"><div class="hbdot"></div><span>SEBI Registered &middot; Motilal Oswal Partner &middot; Est. 2010</span></div>
-    <h1 class="display hero-title reveal">Build Your Wealth With<br><em>Discipline, Strategy &amp; Trust</em></h1>
-    <p class="hero-sub reveal d1">10+ years of experience &nbsp;|&nbsp; &#8377;200 Cr+ assets under advisory &nbsp;|&nbsp; trusted by 2000+ clients across India</p>
-    <div class="hero-btns reveal d2">
-      <a href="contact.html" class="btn bc blg">&#128200; Open Demat Account</a>
-      <a href="contact.html" class="btn bo blg">Book Free Consultation</a>
+  <div class="hero-dots" aria-hidden="true"></div>
+  <div class="hero-orb1" aria-hidden="true"></div>
+  <div class="hero-orb2" aria-hidden="true"></div>
+  <div class="container hero-inner hero-layout">
+    <div class="hero-copy">
+      <div class="hero-badge"><div class="hbdot"></div><span>SEBI Registered &middot; Motilal Oswal Partner &middot; Est. 2010</span></div>
+      <h1 class="display hero-title reveal">Build Your Wealth With<br><em>Discipline, Strategy &amp; Trust</em></h1>
+      <p class="hero-sub reveal d1">10+ years of experience &nbsp;|&nbsp; &#8377;200 Cr+ assets under advisory &nbsp;|&nbsp; trusted by 2000+ clients across India</p>
+      <div class="hero-btns reveal d2">
+        <a href="contact.html" class="btn bc blg hero-cta-primary">&#128200; Open Demat Account</a>
+        <a href="contact.html" class="btn bo blg">Book Free Consultation</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-image-frame">
+        <img class="hero-art" src="images/homepage-fintech-visual.png" alt="Colourful glass portfolio dashboards and flowing forms representing thoughtful wealth planning" width="1536" height="1024" fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero-float-card" aria-hidden="true">
+        <span class="hero-float-mark"><i></i><i></i><i></i></span>
+        <span class="hero-float-copy"><small>WEALTH PLANNING</small><strong>Built around your goals</strong></span>
+      </div>
     </div>
   </div>
 </section>
