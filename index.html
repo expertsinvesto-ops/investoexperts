@@ -92,18 +92,18 @@ section{padding:90px 0}
 .t-dn{color:#f87171}
 
 /* HERO */
-.hero{min-height:100vh;background:linear-gradient(135deg,var(--white) 0%,var(--cream) 55%,var(--cream2) 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding-top:72px}
+.hero{min-height:68vh;background:linear-gradient(135deg,var(--white) 0%,var(--cream) 55%,var(--cream2) 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding:0}
 .hero-dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(200,151,58,.18) 1px,transparent 1px);background-size:36px 36px;pointer-events:none}
 .hero-orb1{position:absolute;width:700px;height:700px;top:-180px;right:-160px;border-radius:50%;background:radial-gradient(circle,rgba(200,151,58,.12) 0%,transparent 65%);pointer-events:none}
 .hero-orb2{position:absolute;width:400px;height:400px;bottom:-120px;left:-80px;border-radius:50%;background:radial-gradient(circle,rgba(155,28,46,.07) 0%,transparent 65%);pointer-events:none}
-.hero-inner{position:relative;z-index:2;padding:70px 0}
+.hero-inner{position:relative;z-index:2;padding:48px 0;max-width:1600px;width:100%}
 .hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(155,28,46,.06);border:1px solid rgba(155,28,46,.18);border-radius:2px;padding:6px 16px;margin-bottom:24px}
 .hbdot{width:6px;height:6px;border-radius:50%;background:var(--crimson);animation:blink 2s ease-in-out infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
 .hero-badge span{font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--crimson)}
-.hero-title{color:var(--charcoal);max-width:740px;margin-bottom:20px}
-.hero-sub{max-width:490px;margin-bottom:38px;color:var(--mid);font-size:1.04rem;line-height:1.82}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:52px}
+.hero-title{color:var(--charcoal);max-width:1400px;margin-bottom:16px;font-size:clamp(3rem,6vw,5.1rem)}
+.hero-sub{max-width:760px;margin-bottom:28px;color:var(--mid);font-size:1.08rem;line-height:1.75}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:0}
 .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:6px;overflow:hidden;max-width:540px;background:var(--white);box-shadow:0 8px 32px var(--shadow)}
 .hstat{padding:20px 22px;border-right:1px solid var(--border)}
 .hstat:last-child{border-right:none}
@@ -494,7 +494,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
     </script>
   </div>
 </div>
-<div aria-hidden="true" style="height:46px"></div>
+<div aria-hidden="true" style="height:118px"></div>
 <div class="assoc-bar">
   <div class="container">
     <div class="assoc-inner">
@@ -508,80 +508,22 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
     </div>
   </div>
 </div>
-<section class="hero" id="home" style="padding-top:0;margin-top:0">
+<section class="hero" id="home">
   <div class="hero-dots"></div>
   <div class="hero-orb1"></div>
   <div class="hero-orb2"></div>
   <div class="container hero-inner">
     <div class="hero-badge"><div class="hbdot"></div><span>SEBI Registered &middot; Motilal Oswal Partner &middot; Est. 2010</span></div>
-    <h1 class="display hero-title reveal">Build Your Wealth With<br><em>Discipline, Strategy</em><br>&amp; Trust</h1>
-    <p class="hero-sub reveal d1">10+ years experience &nbsp;|&nbsp; &#8377;200 Cr+ AUM &nbsp;|&nbsp; 2000+ satisfied clients across India</p>
+    <h1 class="display hero-title reveal">Build Your Wealth With<br><em>Discipline, Strategy &amp; Trust</em></h1>
+    <p class="hero-sub reveal d1">10+ years of experience &nbsp;|&nbsp; &#8377;200 Cr+ assets under advisory &nbsp;|&nbsp; trusted by 2000+ clients across India</p>
     <div class="hero-btns reveal d2">
       <a href="contact.html" class="btn bc blg">&#128200; Open Demat Account</a>
       <a href="contact.html" class="btn bo blg">Book Free Consultation</a>
     </div>
-    <div class="hero-stats reveal d3">
-      <div class="hstat"><div class="hstat-num">10<em>+ Yrs</em></div><div class="hstat-lbl">Experience</div></div>
-      <div class="hstat"><div class="hstat-num">&#8377;200<em> Cr+</em></div><div class="hstat-lbl">AUM Managed</div></div>
-      <div class="hstat"><div class="hstat-num">2000<em>+</em></div><div class="hstat-lbl">Happy Clients</div></div>
-    </div>
   </div>
 </section>
 
-<div class="trust-bar">
-  <div class="trust-items">
-    <div class="trust-item"><span class="trust-check">&#10003;</span>SEBI Registered</div>
-    <div class="trust-item"><span class="trust-check">&#10003;</span>Motilal Oswal Partner</div>
-    <div class="trust-item"><span class="trust-check">&#10003;</span>2000+ Clients</div>
-    <div class="trust-item"><span class="trust-check">&#10003;</span>Pan India Advisory</div>
-    <div class="trust-item"><span class="trust-check">&#10003;</span>Research-Driven</div>
-  </div>
-</div>
 
-<!-- FREE FINANCIAL SCORE TOOL -->
-<section>
-  <div class="container">
-    <div class="phil-grid">
-      <div class="rev-l">
-        <span class="eyebrow">Free Lead Magnet Tool</span>
-        <h2 class="hl sec-title">Check Your<br>Financial Health Score</h2>
-        <div class="gl"></div>
-        <p class="lead" style="margin-bottom:20px">Get your personalised Financial Health Score in 60 seconds. Understand exactly where you stand and what to do next.</p>
-        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px">
-          <div style="display:flex;gap:10px;align-items:center;font-size:.9rem;color:var(--mid)"><span style="color:var(--crimson);font-weight:700">&#10003;</span>Instant personalised score out of 100</div>
-          <div style="display:flex;gap:10px;align-items:center;font-size:.9rem;color:var(--mid)"><span style="color:var(--crimson);font-weight:700">&#10003;</span>Know if you are on track for your goals</div>
-          <div style="display:flex;gap:10px;align-items:center;font-size:.9rem;color:var(--mid)"><span style="color:var(--crimson);font-weight:700">&#10003;</span>Free detailed plan on WhatsApp</div>
-          <div style="display:flex;gap:10px;align-items:center;font-size:.9rem;color:var(--mid)"><span style="color:var(--crimson);font-weight:700">&#10003;</span>No obligation, no cost</div>
-        </div>
-        <a href="#score-tool" class="btn bc">Get My Score Now &#8594;</a>
-      </div>
-      <div class="rev-r" id="score-tool">
-        <div class="tool-wrap">
-          <div style="position:relative;z-index:1">
-            <div style="font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);margin-bottom:8px">Free Tool</div>
-            <h3 style="font-family:var(--ff-head);font-size:1.6rem;font-weight:700;color:#fff;margin-bottom:4px">Financial Health Score</h3>
-            <p style="font-size:.84rem;color:rgba(255,255,255,.55);margin-bottom:0">Takes 30 seconds &middot; Completely free</p>
-          </div>
-          <div class="tool-form">
-            <div class="tf"><label>Your Age</label><input id="sc-age" type="number" placeholder="e.g. 32" min="18" max="65"></div>
-            <div class="tf"><label>Monthly Income (&#8377;)</label><input id="sc-income" type="number" placeholder="e.g. 80000"></div>
-            <div class="tf"><label>Monthly SIP / Investment (&#8377;)</label><input id="sc-sip" type="number" placeholder="e.g. 15000"></div>
-            <div class="tf"><label>Current Corpus (&#8377;)</label><input id="sc-corpus" type="number" placeholder="e.g. 500000"></div>
-            <div class="tool-btn">
-              <button id="score-btn" class="btn bg blg" style="width:100%;justify-content:center">&#9889; Calculate My Score</button>
-            </div>
-          </div>
-          <div class="score-result" id="score-result">
-            <div class="score-num">0</div>
-            <div class="score-label">Financial Health</div>
-            <div class="score-msg"></div>
-            <a href="https://wa.me/918386002000?text=Hello%20Investo%20Experts%2C%20I%20would%20like%20to%20discuss%20investment%20services.?text=I+got+my+Financial+Health+Score.+Please+send+my+detailed+report." class="btn bc" style="margin-top:16px;width:100%;justify-content:center" target="_blank">&#128172; Get Detailed Report on WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- SERVICES -->
 <section class="s-alt">
@@ -603,113 +545,6 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
   </div>
 </section>
 
-<!-- WHO WE WORK WITH -->
-<section>
-  <div class="container">
-    <div class="sec-hdr c">
-      <span class="eyebrow">Ideal Clients</span>
-      <h2 class="hl sec-title reveal">Who We Work With</h2>
-      <div class="gl c"></div>
-      <p class="sec-sub">We specialise in working with serious investors who are ready to take a disciplined, long-term approach to wealth creation.</p>
-    </div>
-    <div class="wwwork-grid">
-      <div class="wwwork-item reveal d1"><div class="ww-icon">&#128188;</div><div class="ww-title">Salaried Professionals</div><div class="ww-desc">With &#8377;25L+ investable corpus ready for structured wealth creation</div></div>
-      <div class="wwwork-item reveal d2"><div class="ww-icon">&#127970;</div><div class="ww-title">Business Owners</div><div class="ww-desc">Entrepreneurs seeking disciplined personal wealth management</div></div>
-      <div class="wwwork-item reveal d3"><div class="ww-icon">&#9877;</div><div class="ww-title">Doctors &amp; CAs</div><div class="ww-desc">High-income professionals who need time-efficient wealth management</div></div>
-      <div class="wwwork-item reveal d4"><div class="ww-icon">&#127758;</div><div class="ww-title">NRI Investors</div><div class="ww-desc">Non-residents seeking trusted India-based portfolio management</div></div>
-      <div class="wwwork-item reveal d5"><div class="ww-icon">&#127968;</div><div class="ww-title">Retiring Individuals</div><div class="ww-desc">Planning for income security and capital preservation in retirement</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CLIENT JOURNEY -->
-<section class="s-alt">
-  <div class="container">
-    <div class="sec-hdr c">
-      <span class="eyebrow">Our Process</span>
-      <h2 class="hl sec-title reveal">Your Client Journey</h2>
-      <div class="gl c"></div>
-      <p class="sec-sub">People don't buy services &mdash; they buy clarity. Here is exactly how we work with you from day one.</p>
-    </div>
-    <div class="journey-steps">
-      <div class="jstep reveal d1"><div class="jstep-num">1</div><div class="jstep-title">Discovery Meeting</div><div class="jstep-desc">We understand your goals, current situation and financial aspirations in a free consultation.</div></div>
-      <div class="jstep reveal d2"><div class="jstep-num">2</div><div class="jstep-title">Risk Profiling</div><div class="jstep-desc">A detailed assessment of your risk tolerance, investment horizon and return expectations.</div></div>
-      <div class="jstep reveal d3"><div class="jstep-num">3</div><div class="jstep-title">Strategy Creation</div><div class="jstep-desc">A customised investment strategy and asset allocation plan built specifically for you.</div></div>
-      <div class="jstep reveal d4"><div class="jstep-num">4</div><div class="jstep-title">Execution</div><div class="jstep-desc">Portfolio construction and investments executed with discipline and precision.</div></div>
-      <div class="jstep reveal d5"><div class="jstep-num">5</div><div class="jstep-title">Review &amp; Growth</div><div class="jstep-desc">Regular reviews, performance reporting and rebalancing to keep you on track.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- PORTFOLIO PERFORMANCE STYLE BLOCK -->
-<section>
-  <div class="container">
-    <div class="sec-hdr c">
-      <span class="eyebrow">Portfolio Approach</span>
-      <h2 class="hl sec-title reveal">Our Investment Outcomes</h2>
-      <div class="gl c"></div>
-      <p class="sec-sub">We don't chase returns. We build portfolios designed for consistent, risk-adjusted long-term wealth creation.</p>
-    </div>
-    <div class="perf-grid">
-      <div class="perf-item reveal d1"><div class="perf-check">&#10003;</div><div class="perf-text"><h4>Lower Drawdowns</h4><p>Disciplined risk management limits losses during market corrections, protecting your capital.</p></div></div>
-      <div class="perf-item reveal d2"><div class="perf-check">&#10003;</div><div class="perf-text"><h4>Consistent Compounding</h4><p>Staying invested through cycles allows compounding to work over time &mdash; the real wealth creator.</p></div></div>
-      <div class="perf-item reveal d3"><div class="perf-check">&#10003;</div><div class="perf-text"><h4>Benchmark-Aware Strategy</h4><p>Our portfolios are built to deliver performance relative to the broader market over 3-5 year periods.</p></div></div>
-      <div class="perf-item reveal d4"><div class="perf-check">&#10003;</div><div class="perf-text"><h4>Risk-Adjusted Allocation</h4><p>Every rupee is allocated based on your personal risk profile &mdash; not one-size-fits-all recommendations.</p></div></div>
-      <div class="perf-item reveal d5"><div class="perf-check">&#10003;</div><div class="perf-text"><h4>Quality-First Selection</h4><p>We only invest in businesses with clean balance sheets, proven management and strong competitive moats.</p></div></div>
-      <div class="perf-item reveal"><div class="perf-check">&#10003;</div><div class="perf-text"><h4>Tactical Cash Management</h4><p>We hold cash when valuations are stretched. Patience is a strategy, not a weakness.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- 3 CTA FUNNELS -->
-<section class="s-warm">
-  <div class="container">
-    <div class="sec-hdr c">
-      <span class="eyebrow">Start Your Journey</span>
-      <h2 class="hl sec-title reveal">Choose Your Path</h2>
-      <div class="gl c"></div>
-    </div>
-    <div class="funnel-grid">
-      <div class="funnel-card funnel-card-retail reveal d1">
-        <div class="funnel-icon">&#128176;</div>
-        <div class="funnel-label">For Retail Investors</div>
-        <div class="funnel-title">Start SIP Today</div>
-        <div class="funnel-desc">Build wealth systematically with as little as &#8377;500/month. Our advisors will select the right funds for your goals.</div>
-        <a href="contact.html" class="btn bc bsm" style="width:100%;justify-content:center">Start SIP &#8594;</a>
-      </div>
-      <div class="funnel-card funnel-card-hni reveal d2">
-        <div class="funnel-icon">&#127942;</div>
-        <div class="funnel-label">For HNI Investors</div>
-        <div class="funnel-title">Private Portfolio Consultation</div>
-        <div class="funnel-desc">Exclusively for investors with &#8377;25 lakh+. Get a personalised portfolio strategy from our fund manager.</div>
-        <a href="portfolio-management.html" class="btn bg bsm" style="width:100%;justify-content:center">Book Private Consultation &#8594;</a>
-      </div>
-      <div class="funnel-card funnel-card-beginner reveal d3">
-        <div class="funnel-icon">&#128203;</div>
-        <div class="funnel-label">For Beginners</div>
-        <div class="funnel-title">Get Free Financial Plan</div>
-        <div class="funnel-desc">Just starting your investment journey? Get a free personalised financial plan designed for your goals.</div>
-        <a href="contact.html" class="btn bo bsm" style="width:100%;justify-content:center">Get Free Plan &#8594;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- INSIGHTS PREVIEW -->
-<section>
-  <div class="container">
-    <div class="sec-hdr" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px">
-      <div><span class="eyebrow">Latest Thinking</span><h2 class="hl sec-title reveal">Market Insights</h2><div class="gl"></div></div>
-      <a href="insights.html" class="btn bod">View All Articles</a>
-    </div>
-    <div class="igrid">
-      <div class="card ins-card reveal d1"><div class="ins-img" style="background:var(--charcoal)"><div class="ins-ip"></div><div class="ins-ii">&#128202;</div></div><div class="ins-body"><div class="ins-meta"><span class="ins-cat">Market Outlook</span><span class="ins-date">June 2025</span></div><div class="ins-title">Weekly Nifty Outlook: Key Levels to Watch</div><p class="ins-exc">Technical breakdown of Nifty's critical support and resistance zones for the week ahead.</p><a href="post-nifty-outlook.html" class="ins-rd">Read Analysis &#8594;</a></div></div>
-      <div class="card ins-card reveal d2"><div class="ins-img" style="background:#1A1508"><div class="ins-ip"></div><div class="ins-ii">&#127942;</div></div><div class="ins-body"><div class="ins-meta"><span class="ins-cat">Wealth Building</span><span class="ins-date">June 2025</span></div><div class="ins-title">How to Build a &#8377;5 Crore Portfolio from Scratch</div><p class="ins-exc">A practical framework for building a &#8377;5 crore corpus using disciplined equity investing.</p><a href="post-5cr-portfolio.html" class="ins-rd">Read Guide &#8594;</a></div></div>
-      <div class="card ins-card reveal d3"><div class="ins-img" style="background:#0A1A0A"><div class="ins-ip"></div><div class="ins-ii">&#128176;</div></div><div class="ins-body"><div class="ins-meta"><span class="ins-cat">Investor Education</span><span class="ins-date">May 2025</span></div><div class="ins-title">SIP Strategy for Long-Term Wealth Creation</div><p class="ins-exc">How systematic investment plans create extraordinary wealth through the magic of compounding.</p><a href="post-sip-strategy.html" class="ins-rd">Read Guide &#8594;</a></div></div>
-    </div>
-  </div>
-</section>
-
 <!-- TESTIMONIALS -->
 <section class="s-alt">
   <div class="container">
@@ -721,64 +556,6 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
     </div>
   </div>
 </section>
-
-<!-- VIDEO SECTION -->
-<section>
-  <div class="container">
-    <div class="phil-grid">
-      <div class="rev-l">
-        <span class="eyebrow">Meet Our Founder</span>
-        <h2 class="hl sec-title">A Personal Message<br>from Mr. Mahala</h2>
-        <div class="gl"></div>
-        <p class="lead" style="margin-bottom:24px">Finance is built on trust. Before you invest your hard-earned money, you deserve to meet the person managing it.</p>
-        <p style="font-size:.9rem;color:var(--mid);line-height:1.82;margin-bottom:28px">Add your 60-second welcome video here. A personal message from Mr. Mahala introducing Investo Experts, your philosophy, and your commitment to every client.</p>
-        <div style="display:flex;flex-direction:column;gap:10px">
-          <div style="display:flex;gap:10px;font-size:.88rem;color:var(--mid)"><span style="color:var(--crimson);font-weight:700">&#10003;</span>Personal introduction from the founder</div>
-          <div style="display:flex;gap:10px;font-size:.88rem;color:var(--mid)"><span style="color:var(--crimson);font-weight:700">&#10003;</span>Your investment philosophy explained</div>
-          <div style="display:flex;gap:10px;font-size:.88rem;color:var(--mid)"><span style="color:var(--crimson);font-weight:700">&#10003;</span>What makes Investo Experts different</div>
-        </div>
-      </div>
-      <div class="rev-r">
-        <div class="video-placeholder" onclick="alert('Add your YouTube or Vimeo embed code here')">
-          <div class="vplay">&#9654;</div>
-          <div class="vtxt">Welcome to Investo Experts</div>
-          <div style="font-size:.76rem;color:rgba(255,255,255,.35);margin-top:4px">Click to play &middot; 60 seconds</div>
-          <div style="position:absolute;bottom:16px;right:16px;font-size:.68rem;font-weight:600;color:rgba(255,255,255,.3);letter-spacing:.1em">REPLACE WITH YOUR VIDEO</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERIOUS INVESTORS ONLY -->
-<div class="hni-strip">
-  <div class="hni-inner">
-    <div class="rev-l">
-      <span style="font-size:.64rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);display:inline-block;margin-bottom:10px">For Serious Investors Only</span>
-      <h2 class="hl" style="color:#fff;margin-bottom:16px">Portfolio Management<br>for <em style="color:var(--gold);font-style:italic">&#8377;25 Lakh+</em> Investors</h2>
-      <p style="color:rgba(255,255,255,.6);font-size:.96rem;line-height:1.82;margin-bottom:24px">This is not for everyone. Our PMS is exclusively for investors who are serious about building long-term wealth with a disciplined, institutional-grade approach.</p>
-      <div class="hni-feats">
-        <div class="hni-feat">Minimum investment: &#8377;25 Lakhs</div>
-        <div class="hni-feat">Long-term horizon of 3+ years required</div>
-        <div class="hni-feat">Disciplined, research-driven approach only</div>
-        <div class="hni-feat">Direct access to fund manager</div>
-        <div class="hni-feat">Monthly performance reporting</div>
-      </div>
-      <a href="portfolio-management.html" class="btn bg blg" style="margin-top:28px">Schedule Private Consultation</a>
-    </div>
-    <div class="rev-r">
-      <div class="hni-card">
-        <div class="hni-card-title">PMS at a Glance</div>
-        <div class="hni-stat"><span class="hni-stat-label">Minimum Investment</span><span class="hni-stat-val" style="color:var(--gold2)">&#8377;25 Lakhs</span></div>
-        <div class="hni-stat"><span class="hni-stat-label">Investment Horizon</span><span class="hni-stat-val">3&#8211;5 Years</span></div>
-        <div class="hni-stat"><span class="hni-stat-label">Portfolio Stocks</span><span class="hni-stat-val">15&#8211;25 Stocks</span></div>
-        <div class="hni-stat"><span class="hni-stat-label">Rebalancing</span><span class="hni-stat-val">Quarterly</span></div>
-        <div class="hni-stat"><span class="hni-stat-label">Reporting</span><span class="hni-stat-val">Monthly</span></div>
-        <div class="hni-stat"><span class="hni-stat-label">Strategy</span><span class="hni-stat-val" style="color:var(--gold2)">High Conviction</span></div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- FINAL CTA -->
 <div class="cta-s cta-crimson">
