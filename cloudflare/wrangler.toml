@@ -6,12 +6,3 @@ workers_dev = false
 [[routes]]
 pattern = "api.investoexperts.com"
 custom_domain = true
-
-[secrets]
-required = [
-  "WHATSAPP_ACCESS_TOKEN",
-  "WHATSAPP_PHONE_NUMBER_ID",
-  "WHATSAPP_GRAPH_API_VERSION",
-  "WHATSAPP_TEMPLATE_NAME",
-  "WHATSAPP_TEMPLATE_LANGUAGE",
-]
