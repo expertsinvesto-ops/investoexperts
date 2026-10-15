@@ -412,3 +412,25 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
 .hero-title{color:var(--charcoal);max-width:760px;margin-bottom:22px;line-height:1.1}
 .hero-sub{max-width:520px;margin-bottom:40px;color:var(--mid);font-size:1.06rem;line-height:1.8}
 
+/* SITE-WIDE MOTION */
+@keyframes gentleReveal{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes ambientDrift{
+  from{transform:translate3d(0,0,0) scale(1)}
+  to{transform:translate3d(-18px,14px,0) scale(1.04)}
+}
+.hero-orb1,.phero-orb{animation:ambientDrift 20s ease-in-out infinite alternate}
+.hero-orb2{animation:ambientDrift 24s ease-in-out infinite alternate-reverse}
+.hero .hero-badge,.phero .breadcrumb{animation:gentleReveal .7s cubic-bezier(.2,.7,.2,1) both}
+.hero .hero-title.shown,.phero .page-hero-title{animation:gentleReveal .8s .08s cubic-bezier(.2,.7,.2,1) both}
+.hero .hero-sub.shown,.phero .phero-sub{animation:gentleReveal .8s .18s cubic-bezier(.2,.7,.2,1) both}
+.hero .hero-btns.shown{animation:gentleReveal .8s .28s cubic-bezier(.2,.7,.2,1) both}
+.ins-card .ins-img img{transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+.ins-card:hover .ins-img img{transform:scale(1.045)}
+.btn:focus-visible,.nav-link:focus-visible,.ins-rd:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+  .reveal,.rev-l,.rev-r{opacity:1;transform:none}
+}
