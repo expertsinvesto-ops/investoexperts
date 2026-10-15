@@ -523,7 +523,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
             <div class="fg"><label>Message</label><textarea name="message" rows="4" placeholder="Tell us about your financial goals..."></textarea></div>
             <button type="button" id="submit-consultation" class="btn bg" style="width:100%;justify-content:center;padding:16px">Submit &#8594;</button>
           </form>
-          <p id="form-error" role="alert" style="display:none;text-align:center;color:var(--crimson);margin-top:14px"></p>
+          <p id="form-error" role="alert" style="display:none;text-align:center;color:var(--crimson);margin-top:14px">We could not send your request automatically. Please try again or message us on WhatsApp: <a href="https://wa.me/919799922051" target="_blank" rel="noopener">+91 97999 22051</a> or <a href="https://wa.me/918386002000" target="_blank" rel="noopener">+91 83860 02000</a>.</p>
           <div id="form-ok" style="display:none;text-align:center;padding:32px;background:var(--cream2);border-radius:8px;border:1px solid var(--cream3)">
             <div style="font-size:2.5rem;margin-bottom:12px">&#10004;</div>
             <h4 style="font-family:var(--ff-head);font-size:1.3rem;color:var(--charcoal);margin-bottom:8px">Information submitted successfully</h4>
@@ -691,10 +691,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
       form.style.display='none';
       if(ok)ok.style.display='block';
     }catch(e){
-      if(error){
-        error.textContent='We could not submit your information right now. Please try again, or contact us on WhatsApp at +91 97999 22051 or +91 83860 02000.';
-        error.style.display='block';
-      }
+      if(error)error.style.display='block';
     }finally{
       button.disabled=false;
       button.textContent='Submit →';
