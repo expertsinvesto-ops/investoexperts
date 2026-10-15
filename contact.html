@@ -494,6 +494,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
         <div class="fbox">
           <h3>Book Your Free Consultation</h3>
           <form id="cform" name="contact">
+            <div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden"><label>Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
             <div class="frow">
               <div class="fg"><label>Full Name *</label><input name="name" type="text" placeholder="Your full name" required></div>
               <div class="fg"><label>Phone *</label><input name="phone" type="tel" placeholder="+91 83860 02000" required></div>
@@ -520,14 +521,13 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
               </select>
             </div>
             <div class="fg"><label>Message</label><textarea name="message" rows="4" placeholder="Tell us about your financial goals..."></textarea></div>
-            <button type="submit" class="btn bg" style="width:100%;justify-content:center;padding:16px">Submit &#8594;</button>
+            <button type="button" id="submit-consultation" class="btn bg" style="width:100%;justify-content:center;padding:16px">Submit &#8594;</button>
           </form>
+          <p id="form-error" role="alert" style="display:none;text-align:center;color:var(--crimson);margin-top:14px"></p>
           <div id="form-ok" style="display:none;text-align:center;padding:32px;background:var(--cream2);border-radius:8px;border:1px solid var(--cream3)">
             <div style="font-size:2.5rem;margin-bottom:12px">&#10004;</div>
-            <h4 style="font-family:var(--ff-head);font-size:1.3rem;color:var(--charcoal);margin-bottom:8px">Send your request on WhatsApp</h4>
-            <p style="font-size:.9rem;color:var(--mid);margin-bottom:16px">Open each chat and tap Send to deliver your consultation request to both numbers.</p>
-            <a id="wa-owner-link" href="#" target="_blank" rel="noopener" class="btn bg" style="display:flex;width:100%;justify-content:center;margin-bottom:10px">WhatsApp +91 97999 22051</a>
-            <a id="wa-brother-link" href="#" target="_blank" rel="noopener" class="btn bg" style="display:flex;width:100%;justify-content:center">WhatsApp +91 83860 02000</a>
+            <h4 style="font-family:var(--ff-head);font-size:1.3rem;color:var(--charcoal);margin-bottom:8px">Information submitted successfully</h4>
+            <p style="font-size:.9rem;color:var(--mid)">Your information has been successfully submitted. We will get back to you soon.</p>
           </div>
         </div>
       </div>
@@ -667,26 +667,44 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
 (function(){
   var form=document.getElementById('cform');
   var ok=document.getElementById('form-ok');
-  if(!form)return;
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
+  var error=document.getElementById('form-error');
+  var button=document.getElementById('submit-consultation');
+  if(!form||!button)return;
+  var submitRequest=async function(){
     if(!form.reportValidity())return;
+    if(error)error.style.display='none';
     var value=function(name){var el=form.querySelector('[name='+name+']');return el?el.value.trim():'';};
-    var message=[
-      'Hello Investo Experts, I would like to book a free consultation.',
-      '',
-      'Name: '+value('name'),
-      'Phone: '+value('phone'),
-      'Email: '+value('email'),
-      'Service: '+value('service'),
-      'Investment amount: '+value('amount'),
-      'Message: '+value('message')
-    ].join('\n');
-    var encoded=encodeURIComponent(message);
-    document.getElementById('wa-owner-link').href='https://wa.me/919799922051?text='+encoded;
-    document.getElementById('wa-brother-link').href='https://wa.me/918386002000?text='+encoded;
-    form.style.display='none';
-    if(ok)ok.style.display='block';
+    button.disabled=true;
+    button.textContent='Submitting...';
+    try{
+      var response=await fetch('https://api.investoexperts.com/consultation',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+          name:value('name'),phone:value('phone'),email:value('email'),
+          service:value('service'),amount:value('amount'),message:value('message'),
+          website:value('website')
+        })
+      });
+      var result=await response.json();
+      if(!response.ok||!result.ok)throw new Error('submission_failed');
+      form.style.display='none';
+      if(ok)ok.style.display='block';
+    }catch(e){
+      if(error){
+        error.textContent='We could not submit your information right now. Please try again, or contact us on WhatsApp at +91 97999 22051 or +91 83860 02000.';
+        error.style.display='block';
+      }
+    }finally{
+      button.disabled=false;
+      button.textContent='Submit →';
+    }
+  };
+  button.addEventListener('click',submitRequest);
+  form.querySelectorAll('input,select').forEach(function(field){
+    field.addEventListener('keydown',function(e){
+      if(e.key==='Enter'){e.preventDefault();submitRequest();}
+    });
   });
 })();
 
