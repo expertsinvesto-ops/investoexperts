@@ -493,7 +493,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
       <div class="rev-r">
         <div class="fbox">
           <h3>Book Your Free Consultation</h3>
-          <form id="cform" name="contact" method="POST" data-netlify="true">
+          <form id="cform" name="contact">
             <div class="frow">
               <div class="fg"><label>Full Name *</label><input name="name" type="text" placeholder="Your full name" required></div>
               <div class="fg"><label>Phone *</label><input name="phone" type="tel" placeholder="+91 83860 02000" required></div>
@@ -524,8 +524,8 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
           </form>
           <div id="form-ok" style="display:none;text-align:center;padding:32px;background:var(--cream2);border-radius:8px;border:1px solid var(--cream3)">
             <div style="font-size:2.5rem;margin-bottom:12px">&#10004;</div>
-            <h4 style="font-family:var(--ff-head);font-size:1.3rem;color:var(--charcoal);margin-bottom:8px">Message Received!</h4>
-            <p style="font-size:.9rem;color:var(--mid)">Our advisor will contact you within 24 hours.</p>
+            <h4 style="font-family:var(--ff-head);font-size:1.3rem;color:var(--charcoal);margin-bottom:8px">Continue in WhatsApp</h4>
+            <p style="font-size:.9rem;color:var(--mid)">Your message is ready in WhatsApp. Tap Send to submit your consultation request.</p>
           </div>
         </div>
       </div>
@@ -668,14 +668,21 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
   if(!form)return;
   form.addEventListener('submit',function(e){
     e.preventDefault();
-    var leads=JSON.parse(localStorage.getItem('ie_leads')||'[]');
-    var data={date:new Date().toLocaleString()};
-    ['name','phone','email','service','amount','message'].forEach(function(k){
-      var el=form.querySelector('[name='+k+']');
-      if(el)data[k]=el.value;
-    });
-    leads.push(data);
-    localStorage.setItem('ie_leads',JSON.stringify(leads));
+    if(!form.reportValidity())return;
+    var value=function(name){var el=form.querySelector('[name='+name+']');return el?el.value.trim():'';};
+    var message=[
+      'Hello Investo Experts, I would like to book a free consultation.',
+      '',
+      'Name: '+value('name'),
+      'Phone: '+value('phone'),
+      'Email: '+value('email'),
+      'Service: '+value('service'),
+      'Investment amount: '+value('amount'),
+      'Message: '+value('message')
+    ].join('\n');
+    var url='https://wa.me/918386002000?text='+encodeURIComponent(message);
+    var whatsappWindow=window.open(url,'_blank');
+    if(!whatsappWindow){window.location.href=url;return;}
     form.style.display='none';
     if(ok)ok.style.display='block';
   });
