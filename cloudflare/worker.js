@@ -84,7 +84,7 @@ export default {
       service ? "Service: " + service : "",
       amount ? "Investment amount: " + amount : "",
       note ? "Message: " + note : "",
-    ].filter(Boolean).join("\n");
+    ].filter(Boolean).join("\n").slice(0, 900);
     const endpoint = "https://graph.facebook.com/" +
       env.WHATSAPP_GRAPH_API_VERSION + "/" +
       env.WHATSAPP_PHONE_NUMBER_ID + "/messages";
