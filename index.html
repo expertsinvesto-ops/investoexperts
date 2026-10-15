@@ -785,38 +785,34 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
 
 // ACTIVE LINK
 (function(){
-  var cur=window.loc// FINANCIAL TOOL TABS
-(function(){
-  var tabs=Array.prototype.slice.call(document.querySelectorAll('.tool-tabs [role="tab"]'));
-  if(!tabs.length)return;
-  function activate(tab){
-    tabs.forEach(function(item){
-      var selected=item===tab;
-      item.classList.toggle('active',selected);
-      item.setAttribute('aria-selected',selected?'true':'false');
-      item.tabIndex=selected?0:-1;
-      var panel=document.getElementById(item.getAttribute('aria-controls'));
-      if(panel)panel.hidden=!selected;
-    });
-  }
-  tabs.forEach(function(tab,index){
-    tab.addEventListener('click',function(){activate(tab)});
-    tab.addEventListener('keydown',function(event){
-      var nextIndex=index;
-      if(event.key==='ArrowRight')nextIndex=(index+1)%tabs.length;
-      else if(event.key==='ArrowLeft')nextIndex=(index+tabs.length-1)%tabs.length;
-      else if(event.key==='Home')nextIndex=0;
-      else if(event.key==='End')nextIndex=tabs.length-1;
-      else return;
-      event.preventDefault();
-      var next=tabs[nextIndex];
-      activate(next);
-      next.focus();
-    });
+  var cur=window.location.pathname.split('/').pop()||'index.html';
+  document.querySelectorAll('.nav-link').forEach(function(a){
+    if((a.getAttribute('href')||'')=== cur)a.classList.add('active');
   });
 })();
 
-toLocaleString():cur.toFixed(1);
+// SCROLL REVEAL
+(function(){
+  var els=document.querySelectorAll('.reveal,.rev-l,.rev-r');
+  if(!els.length)return;
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('shown')});
+  },{threshold:0.12});
+  els.forEach(function(el){io.observe(el)});
+})();
+
+// COUNTERS
+(function(){
+  var counters=document.querySelectorAll('.cnum');
+  if(!counters.length)return;
+  var done=false;
+  function run(){
+    if(done)return;done=true;
+    counters.forEach(function(el){
+      var t=parseFloat(el.dataset.target),dur=2000,step=t/(dur/16),cur=0;
+      var iv=setInterval(function(){
+        cur=Math.min(cur+step,t);
+        el.textContent=Number.isInteger(t)?Math.floor(cur).toLocaleString():cur.toFixed(1);
         if(cur>=t)clearInterval(iv);
       },16);
     });
@@ -903,8 +899,8 @@ toLocaleString():cur.toFixed(1);
 
 // FINANCIAL TOOL TABS
 (function(){
-  var tabs=[document.getElementById('tool-tab-score'),document.getElementById('tool-tab-sip')];
-  if(!tabs[0]||!tabs[1])return;
+  var tabs=Array.prototype.slice.call(document.querySelectorAll('.tool-tabs [role="tab"]'));
+  if(!tabs.length)return;
   function activate(tab){
     tabs.forEach(function(item){
       var selected=item===tab;
@@ -918,12 +914,16 @@ toLocaleString():cur.toFixed(1);
   tabs.forEach(function(tab,index){
     tab.addEventListener('click',function(){activate(tab)});
     tab.addEventListener('keydown',function(event){
-      if(event.key==='ArrowRight'||event.key==='ArrowLeft'){
-        event.preventDefault();
-        var next=tabs[(index+(event.key==='ArrowRight'?1:tabs.length-1))%tabs.length];
-        activate(next);
-        next.focus();
-      }
+      var nextIndex=index;
+      if(event.key==='ArrowRight')nextIndex=(index+1)%tabs.length;
+      else if(event.key==='ArrowLeft')nextIndex=(index+tabs.length-1)%tabs.length;
+      else if(event.key==='Home')nextIndex=0;
+      else if(event.key==='End')nextIndex=tabs.length-1;
+      else return;
+      event.preventDefault();
+      var next=tabs[nextIndex];
+      activate(next);
+      next.focus();
     });
   });
 })();
