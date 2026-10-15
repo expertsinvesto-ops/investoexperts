@@ -521,7 +521,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
               </select>
             </div>
             <div class="fg"><label>Message</label><textarea name="message" rows="4" placeholder="Tell us about your financial goals..."></textarea></div>
-            <button type="button" id="submit-consultation" class="btn bg" style="width:100%;justify-content:center;padding:16px">Submit &#8594;</button>
+            <button type="submit" id="submit-consultation" class="btn bg" style="width:100%;justify-content:center;padding:16px">Submit &#8594;</button>
           </form>
           <p id="form-error" role="alert" style="display:none;text-align:center;color:var(--crimson);margin-top:14px">We could not send your request automatically. Please try again or message us on WhatsApp: <a href="https://wa.me/919799922051" target="_blank" rel="noopener">+91 97999 22051</a> or <a href="https://wa.me/918386002000" target="_blank" rel="noopener">+91 83860 02000</a>.</p>
           <div id="form-ok" style="display:none;text-align:center;padding:32px;background:var(--cream2);border-radius:8px;border:1px solid var(--cream3)">
@@ -691,11 +691,9 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
       button.textContent='Submit →';
     }
   };
-  button.addEventListener('click',submitRequest);
-  form.querySelectorAll('input,select').forEach(function(field){
-    field.addEventListener('keydown',function(e){
-      if(e.key==='Enter'){e.preventDefault();submitRequest();}
-    });
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    submitRequest();
   });
 })();
 
