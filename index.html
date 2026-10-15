@@ -528,7 +528,8 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
 .svc-card:hover .svc-icon svg{transform:scale(1.06) rotate(3deg)}
 .svc-plate{fill:rgba(255,255,255,.76);stroke:rgba(200,151,58,.18);stroke-width:1}
 .svc-line{fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-.svc-tone-red{stroke:#9B1C2E;fill:#9B1C2E}.svc-tone-gold{stroke:#C8973A;fill:#C8973A}.svc-tone-blue{stroke:#6589CF;fill:#6589CF}.svc-tone-teal{stroke:#4D9C97;fill:#4D9C97}
+.svc-tone-red{stroke:#9B1C2E;fill:none}.svc-tone-gold{stroke:#C8973A;fill:none}.svc-tone-blue{stroke:#6589CF;fill:none}.svc-tone-teal{stroke:#4D9C97;fill:none}
+.svc-bar.svc-tone-red,.svc-dot.svc-tone-red,.svc-fund.svc-tone-red{fill:#9B1C2E}.svc-bar.svc-tone-gold,.svc-dot.svc-tone-gold,.svc-fund.svc-tone-gold{fill:#C8973A}.svc-bar.svc-tone-blue,.svc-dot.svc-tone-blue,.svc-fund.svc-tone-blue{fill:#6589CF}.svc-bar.svc-tone-teal,.svc-dot.svc-tone-teal,.svc-fund.svc-tone-teal{fill:#4D9C97}
 .svc-bar{opacity:.84}.svc-dot{stroke:#fff;stroke-width:1.5}
 .svc-ring-bg{fill:none;stroke:#E9DFC9;stroke-width:7}
 .svc-ring{fill:none;stroke-width:7;stroke-linecap:round}
@@ -558,6 +559,10 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
   .hero-title-mask>*{opacity:1!important;transform:none!important}
 }
 
+
+.svc-icon .svc-line{stroke-dasharray:700 700;stroke-dashoffset:700;transition:stroke-dashoffset 1.35s cubic-bezier(.2,.7,.2,1)}
+.svc-card.shown .svc-icon .svc-line{stroke-dashoffset:0}
+@media(prefers-reduced-motion:reduce){.svc-icon .svc-line{stroke-dashoffset:0!important}}
 </style>
 </head>
 <body>
