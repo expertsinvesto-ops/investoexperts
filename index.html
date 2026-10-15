@@ -244,7 +244,7 @@ section{padding:90px 0}
 .score-num{font-family:var(--ff-head);font-size:3.5rem;font-weight:700;color:var(--gold);line-height:1}
 .score-label{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:6px}
 .score-msg{font-size:.9rem;color:rgba(255,255,255,.75);margin-top:12px;line-height:1.7}
-.tool-tabs{display:flex;gap:8px;margin-top:24px;position:relative;z-index:1}
+.tool-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:24px;position:relative;z-index:1}
 .tool-tab{flex:1;padding:11px 12px;border:1px solid rgba(200,151,58,.3);border-radius:5px;background:rgba(255,255,255,.04);color:rgba(255,255,255,.72);font-family:var(--ff-body);font-size:.8rem;font-weight:700;cursor:pointer;transition:all .2s}
 .tool-tab:hover{border-color:var(--gold);color:#fff}
 .tool-tab.active{background:var(--gold);border-color:var(--gold);color:var(--charcoal)}
@@ -544,13 +544,14 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
     <div class="phil-grid">
       <div class="rev-l">
         <span class="eyebrow">Free Financial Tools</span>
-        <h2 class="hl sec-title">Make Your Next<br>Money Move Clearer</h2>
+        <h2 class="hl sec-title">Tools to Help You<br>Plan Ahead</h2>
         <div class="gl"></div>
-        <p class="lead" style="margin-bottom:20px">Check your financial health score or estimate how a monthly SIP could grow over time.</p>
+        <p class="lead" style="margin-bottom:20px">Check your financial health, plan a monthly investment goal, or estimate how your investments may grow toward retirement.</p>
         <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px">
           <div style="display:flex;gap:10px;align-items:center;font-size:.9rem;color:var(--mid)"><span style="color:var(--crimson);font-weight:700">&#10003;</span>Get a personalised score out of 100</div>
-          <div style="display:flex;gap:10px;align-items:center;font-size:.9rem;color:var(--mid)"><span style="color:var(--crimson);font-weight:700">&#10003;</span>Estimate a SIP's future value for your plan</div>
-          <div style="display:flex;gap:10px;align-items:center;font-size:.9rem;color:var(--mid)"><span style="color:var(--crimson);font-weight:700">&#10003;</span>Free and quick to use</div>
+          <div style="display:flex;gap:10px;align-items:center;font-size:.9rem;color:var(--mid)"><span style="color:var(--crimson);font-weight:700">&#10003;</span>Estimate growth from a monthly SIP</div>
+          <div style="display:flex;gap:10px;align-items:center;font-size:.9rem;color:var(--mid)"><span style="color:var(--crimson);font-weight:700">&#10003;</span>Find the monthly amount for a target</div>
+          <div style="display:flex;gap:10px;align-items:center;font-size:.9rem;color:var(--mid)"><span style="color:var(--crimson);font-weight:700">&#10003;</span>Plan toward an estimated retirement corpus</div>
         </div>
         <a href="#score-tool" class="btn bc">Explore Free Tools &#8594;</a>
       </div>
@@ -564,6 +565,8 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
           <div class="tool-tabs" role="tablist" aria-label="Financial calculators">
             <button type="button" class="tool-tab active" id="tool-tab-score" role="tab" aria-selected="true" aria-controls="score-panel" tabindex="0">Health Score</button>
             <button type="button" class="tool-tab" id="tool-tab-sip" role="tab" aria-selected="false" aria-controls="sip-panel" tabindex="-1">SIP Calculator</button>
+            <button type="button" class="tool-tab" id="tool-tab-goal" role="tab" aria-selected="false" aria-controls="goal-panel" tabindex="-1">Goal Planner</button>
+            <button type="button" class="tool-tab" id="tool-tab-retirement" role="tab" aria-selected="false" aria-controls="retirement-panel" tabindex="-1">Retirement Planner</button>
           </div>
           <div class="tool-panel" id="score-panel" role="tabpanel" aria-labelledby="tool-tab-score">
             <div class="tool-form">
@@ -598,6 +601,44 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
                 <div class="sip-metric"><span>Estimated growth</span><strong id="sip-growth"></strong></div>
               </div>
               <p class="sip-estimate-note">Estimate only. Assumes fixed monthly investments and monthly compounding; actual returns vary and are not guaranteed.</p>
+            </div>
+          </div>
+          <div class="tool-panel" id="goal-panel" role="tabpanel" aria-labelledby="tool-tab-goal" hidden>
+            <form class="tool-form" id="goal-form">
+              <div class="tf"><label for="goal-target">Target amount (&#8377;)</label><input id="goal-target" type="number" min="1000" step="1000" placeholder="e.g. 2500000" required></div>
+              <div class="tf"><label for="goal-years">Time to reach goal (years)</label><input id="goal-years" type="number" min="1" max="50" step="1" placeholder="e.g. 10" required></div>
+              <div class="tf"><label for="goal-return">Assumed yearly return (%)</label><input id="goal-return" type="number" min="0" max="30" step="0.1" placeholder="e.g. 12" required></div>
+              <div class="tool-btn">
+                <button type="submit" class="btn bg blg" style="width:100%;justify-content:center">&#127919; Find My Monthly Amount</button>
+              </div>
+            </form>
+            <div class="score-result sip-result" id="goal-result" aria-live="polite">
+              <div class="sip-metrics">
+                <div class="sip-metric"><span>Suggested monthly investment</span><strong id="goal-monthly"></strong></div>
+                <div class="sip-metric"><span>Total invested</span><strong id="goal-invested"></strong></div>
+                <div class="sip-metric"><span>Estimated growth</span><strong id="goal-growth"></strong></div>
+              </div>
+              <p class="sip-estimate-note">Estimate only. Assumes fixed monthly investments and monthly compounding; actual returns vary and are not guaranteed.</p>
+            </div>
+          </div>
+          <div class="tool-panel" id="retirement-panel" role="tabpanel" aria-labelledby="tool-tab-retirement" hidden>
+            <form class="tool-form" id="retirement-form">
+              <div class="tf"><label for="retirement-current-age">Your current age</label><input id="retirement-current-age" type="number" min="18" max="79" step="1" placeholder="e.g. 35" required></div>
+              <div class="tf"><label for="retirement-age">Age you plan to retire</label><input id="retirement-age" type="number" min="19" max="80" step="1" placeholder="e.g. 60" required></div>
+              <div class="tf"><label for="retirement-corpus">Current retirement savings (&#8377;)</label><input id="retirement-corpus" type="number" min="0" step="1000" placeholder="e.g. 500000"></div>
+              <div class="tf"><label for="retirement-monthly">Monthly investment until retirement (&#8377;)</label><input id="retirement-monthly" type="number" min="0" step="500" placeholder="e.g. 10000" required></div>
+              <div class="tf"><label for="retirement-return">Assumed yearly return (%)</label><input id="retirement-return" type="number" min="0" max="30" step="0.1" placeholder="e.g. 10" required></div>
+              <div class="tool-btn">
+                <button type="submit" class="btn bg blg" style="width:100%;justify-content:center">&#127769; Estimate Retirement Corpus</button>
+              </div>
+            </form>
+            <div class="score-result sip-result" id="retirement-result" aria-live="polite">
+              <div class="sip-metrics">
+                <div class="sip-metric"><span>Estimated retirement corpus</span><strong id="retirement-total"></strong></div>
+                <div class="sip-metric"><span>From current savings</span><strong id="retirement-existing-value"></strong></div>
+                <div class="sip-metric"><span>From monthly investments</span><strong id="retirement-monthly-value"></strong></div>
+              </div>
+              <p class="sip-estimate-note">Estimate only. Does not adjust for inflation, taxes, or fees. Actual returns vary and are not guaranteed.</p>
             </div>
           </div>
         </div>
@@ -744,34 +785,38 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
 
 // ACTIVE LINK
 (function(){
-  var cur=window.location.pathname.split('/').pop()||'index.html';
-  document.querySelectorAll('.nav-link').forEach(function(a){
-    if((a.getAttribute('href')||'')=== cur)a.classList.add('active');
+  var cur=window.loc// FINANCIAL TOOL TABS
+(function(){
+  var tabs=Array.prototype.slice.call(document.querySelectorAll('.tool-tabs [role="tab"]'));
+  if(!tabs.length)return;
+  function activate(tab){
+    tabs.forEach(function(item){
+      var selected=item===tab;
+      item.classList.toggle('active',selected);
+      item.setAttribute('aria-selected',selected?'true':'false');
+      item.tabIndex=selected?0:-1;
+      var panel=document.getElementById(item.getAttribute('aria-controls'));
+      if(panel)panel.hidden=!selected;
+    });
+  }
+  tabs.forEach(function(tab,index){
+    tab.addEventListener('click',function(){activate(tab)});
+    tab.addEventListener('keydown',function(event){
+      var nextIndex=index;
+      if(event.key==='ArrowRight')nextIndex=(index+1)%tabs.length;
+      else if(event.key==='ArrowLeft')nextIndex=(index+tabs.length-1)%tabs.length;
+      else if(event.key==='Home')nextIndex=0;
+      else if(event.key==='End')nextIndex=tabs.length-1;
+      else return;
+      event.preventDefault();
+      var next=tabs[nextIndex];
+      activate(next);
+      next.focus();
+    });
   });
 })();
 
-// SCROLL REVEAL
-(function(){
-  var els=document.querySelectorAll('.reveal,.rev-l,.rev-r');
-  if(!els.length)return;
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('shown')});
-  },{threshold:0.12});
-  els.forEach(function(el){io.observe(el)});
-})();
-
-// COUNTERS
-(function(){
-  var counters=document.querySelectorAll('.cnum');
-  if(!counters.length)return;
-  var done=false;
-  function run(){
-    if(done)return;done=true;
-    counters.forEach(function(el){
-      var t=parseFloat(el.dataset.target),dur=2000,step=t/(dur/16),cur=0;
-      var iv=setInterval(function(){
-        cur=Math.min(cur+step,t);
-        el.textContent=Number.isInteger(t)?Math.floor(cur).toLocaleString():cur.toFixed(1);
+toLocaleString():cur.toFixed(1);
         if(cur>=t)clearInterval(iv);
       },16);
     });
@@ -902,6 +947,62 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
     document.getElementById('sip-value').textContent=formatter.format(estimate);
     document.getElementById('sip-invested').textContent=formatter.format(invested);
     document.getElementById('sip-growth').textContent=formatter.format(Math.max(0,estimate-invested));
+    result.style.display='block';
+  });
+})();
+
+// MONTHLY INVESTMENT GOAL CALCULATOR
+(function(){
+  var form=document.getElementById('goal-form');
+  var result=document.getElementById('goal-result');
+  if(!form||!result)return;
+  form.addEventListener('submit',function(event){
+    event.preventDefault();
+    var target=Number(document.getElementById('goal-target').value);
+    var years=Number(document.getElementById('goal-years').value);
+    var yearlyReturn=Number(document.getElementById('goal-return').value)/100;
+    if(!Number.isFinite(target)||!Number.isFinite(years)||!Number.isFinite(yearlyReturn)||target<=0||years<=0||yearlyReturn<0)return;
+    var months=years*12;
+    var monthlyRate=yearlyReturn/12;
+    var monthly=monthlyRate===0?target/months:target*monthlyRate/(Math.pow(1+monthlyRate,months)-1);
+    var invested=monthly*months;
+    var formatter=new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0});
+    document.getElementById('goal-monthly').textContent=formatter.format(monthly);
+    document.getElementById('goal-invested').textContent=formatter.format(invested);
+    document.getElementById('goal-growth').textContent=formatter.format(Math.max(0,target-invested));
+    result.style.display='block';
+  });
+})();
+
+// RETIREMENT PLANNER
+(function(){
+  var form=document.getElementById('retirement-form');
+  var result=document.getElementById('retirement-result');
+  if(!form||!result)return;
+  form.addEventListener('submit',function(event){
+    event.preventDefault();
+    var currentAge=Number(document.getElementById('retirement-current-age').value);
+    var retirementAge=Number(document.getElementById('retirement-age').value);
+    var currentSavings=Number(document.getElementById('retirement-corpus').value)||0;
+    var monthly=Number(document.getElementById('retirement-monthly').value);
+    var yearlyReturn=Number(document.getElementById('retirement-return').value)/100;
+    var retirementInput=document.getElementById('retirement-age');
+    retirementInput.setCustomValidity('');
+    if(retirementAge<=currentAge){
+      retirementInput.setCustomValidity('Retirement age must be greater than your current age.');
+      retirementInput.reportValidity();
+      retirementInput.setCustomValidity('');
+      return;
+    }
+    if(!Number.isFinite(currentAge)||!Number.isFinite(retirementAge)||!Number.isFinite(currentSavings)||!Number.isFinite(monthly)||!Number.isFinite(yearlyReturn)||currentSavings<0||monthly<0||yearlyReturn<0)return;
+    var months=(retirementAge-currentAge)*12;
+    var monthlyRate=yearlyReturn/12;
+    var existingValue=currentSavings*Math.pow(1+monthlyRate,months);
+    var monthlyValue=monthlyRate===0?monthly*months:monthly*((Math.pow(1+monthlyRate,months)-1)/monthlyRate);
+    var formatter=new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0});
+    document.getElementById('retirement-total').textContent=formatter.format(existingValue+monthlyValue);
+    document.getElementById('retirement-existing-value').textContent=formatter.format(existingValue);
+    document.getElementById('retirement-monthly-value').textContent=formatter.format(monthlyValue);
     result.style.display='block';
   });
 })();
