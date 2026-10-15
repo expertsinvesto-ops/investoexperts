@@ -493,8 +493,8 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
       <div class="rev-r">
         <div class="fbox">
           <h3>Book Your Free Consultation</h3>
-          <form id="cform" name="contact">
-            <div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden"><label>Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <form id="cform" name="contact" action="https://formspree.io/f/moejpdny" method="POST">
+            <div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden"><label>Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
             <div class="frow">
               <div class="fg"><label>Full Name *</label><input name="name" type="text" placeholder="Your full name" required></div>
               <div class="fg"><label>Phone *</label><input name="phone" type="tel" placeholder="+91 83860 02000" required></div>
@@ -673,21 +673,15 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
   var submitRequest=async function(){
     if(!form.reportValidity())return;
     if(error)error.style.display='none';
-    var value=function(name){var el=form.querySelector('[name='+name+']');return el?el.value.trim():'';};
     button.disabled=true;
     button.textContent='Submitting...';
     try{
-      var response=await fetch('https://api.investoexperts.com/consultation',{
+      var response=await fetch(form.action,{
         method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({
-          name:value('name'),phone:value('phone'),email:value('email'),
-          service:value('service'),amount:value('amount'),message:value('message'),
-          website:value('website')
-        })
+        headers:{'Accept':'application/json'},
+        body:new FormData(form)
       });
-      var result=await response.json();
-      if(!response.ok||!result.ok)throw new Error('submission_failed');
+      if(!response.ok)throw new Error('submission_failed');
       form.style.display='none';
       if(ok)ok.style.display='block';
     }catch(e){
