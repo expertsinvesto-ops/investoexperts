@@ -563,6 +563,154 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
 .svc-icon .svc-line{stroke-dasharray:700 700;stroke-dashoffset:700;transition:stroke-dashoffset 1.35s cubic-bezier(.2,.7,.2,1)}
 .svc-card.shown .svc-icon .svc-line{stroke-dashoffset:0}
 @media(prefers-reduced-motion:reduce){.svc-icon .svc-line{stroke-dashoffset:0!important}}
+
+/* PREMIUM LIGHT INVESTO HOMEPAGE */
+html{scroll-behavior:smooth;scroll-padding-top:112px}
+body{background:#fbfaf6}
+.container{max-width:1280px;padding-left:clamp(22px,5vw,72px);padding-right:clamp(22px,5vw,72px)}
+.hero{min-height:690px;min-height:min(790px,calc(100svh - 118px));padding:52px 0 82px;background:radial-gradient(ellipse at 82% 50%,rgba(216,201,168,.34),transparent 40%),linear-gradient(118deg,#fff 2%,#fbfaf6 56%,#f3ebdc 100%)}
+.hero-dots{opacity:.4;background-size:42px 42px}
+.hero-orb1{width:760px;height:760px;top:-250px;right:-260px;background:radial-gradient(circle,rgba(200,151,58,.14),transparent 67%)}
+.hero-orb2{width:520px;height:520px;left:-240px;bottom:-230px;background:radial-gradient(circle,rgba(155,28,46,.075),transparent 68%)}
+.hero-inner{max-width:1440px;padding:32px clamp(22px,5vw,72px)}
+.hero-layout{grid-template-columns:minmax(0,.91fr) minmax(0,1.09fr);gap:clamp(42px,6vw,92px)}
+.hero-copy{max-width:620px}
+.hero-badge{border-radius:999px;padding:8px 15px;margin-bottom:28px;backdrop-filter:blur(10px);box-shadow:0 6px 24px rgba(80,50,10,.045)}
+.hero-badge span{font-size:.64rem;letter-spacing:.12em}
+.hero-title{max-width:16ch;margin-bottom:18px;font-size:clamp(3.25rem,4.4vw,5.05rem);line-height:.99;letter-spacing:-.035em}
+.hero-title em{font-weight:500}
+.hero-title-mask{padding-bottom:.12em;margin-bottom:-.12em}
+.hero-sub{max-width:570px;margin-bottom:30px;font-size:1.03rem;line-height:1.75}
+.hero-btns{gap:12px}
+.hero-btns .btn{border-radius:999px;padding:15px 23px;letter-spacing:.04em}
+.hero-btns .btn.bc{box-shadow:0 10px 28px rgba(155,28,46,.18)}
+.hero-btns .btn.bo{background:rgba(255,255,255,.6);border-color:rgba(155,28,46,.3)}
+.hero-proof{display:flex;align-items:stretch;gap:0;margin-top:42px;border-top:1px solid rgba(200,151,58,.22);padding-top:21px}
+.hero-proof>div{display:flex;flex-direction:column;gap:3px;min-width:0;padding:0 20px;border-right:1px solid rgba(200,151,58,.2)}
+.hero-proof>div:first-child{padding-left:0}
+.hero-proof>div:last-child{border-right:0}
+.hero-proof strong{font-family:var(--ff-head);font-size:1.42rem;line-height:1.1;color:var(--charcoal);white-space:nowrap}
+.hero-proof span{font-size:.62rem;text-transform:uppercase;letter-spacing:.075em;color:var(--mid);white-space:nowrap}
+.hero-visual{--tilt-x:0deg;--tilt-y:0deg;position:relative;width:100%;padding:11px;border-radius:30px;background:rgba(255,255,255,.78);border:1px solid rgba(200,151,58,.28);box-shadow:0 36px 88px rgba(58,44,22,.16),0 8px 22px rgba(58,44,22,.06);transform:perspective(1200px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));transform-style:preserve-3d;transition:transform .3s ease,box-shadow .45s cubic-bezier(.2,.7,.2,1);animation:heroVisualIn .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-visual:hover{box-shadow:0 42px 100px rgba(58,44,22,.2),0 10px 28px rgba(58,44,22,.08)}
+.hero-visual::before{content:"";position:absolute;z-index:-1;inset:9% -8% -8% 15%;border-radius:38px;background:radial-gradient(ellipse,rgba(200,151,58,.2),rgba(155,28,46,.06) 54%,transparent 75%);filter:blur(20px);pointer-events:none}
+.hero-image-frame{position:relative;isolation:isolate;overflow:hidden;aspect-ratio:1.48;border-radius:22px;background:#e8e0d1;line-height:0}
+.hero-art{position:absolute;inset:0;display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:center;filter:saturate(.86) contrast(.96);transition:transform 1s cubic-bezier(.2,.7,.2,1),filter .7s}
+.hero-visual:hover .hero-art{transform:scale(1.035);filter:saturate(.98) contrast(.98)}
+.hero-video-wash{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(23,25,28,.04) 0%,rgba(23,25,28,.05) 36%,rgba(23,25,28,.35) 100%),linear-gradient(120deg,rgba(247,238,220,.08),transparent 45%);pointer-events:none}
+.hero-product-preview{position:absolute;z-index:2;left:6%;right:6%;bottom:7%;padding:17px 19px 13px;border:1px solid rgba(255,255,255,.66);border-radius:18px;background:rgba(255,255,255,.91);box-shadow:0 18px 48px rgba(18,22,30,.2);backdrop-filter:blur(18px);line-height:1.35;transform:translateZ(26px);animation:previewLift .9s .28s both cubic-bezier(.2,.7,.2,1)}
+.preview-topline{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.preview-topline>div{display:flex;flex-direction:column;gap:2px}
+.preview-kicker{font-size:.56rem;font-weight:700;letter-spacing:.16em;color:var(--gold3)}
+.preview-topline strong{font-size:.9rem;font-weight:700;color:var(--charcoal)}
+.preview-live{display:flex;align-items:center;gap:6px;font-size:.52rem;letter-spacing:.12em;font-weight:700;color:var(--mid)}
+.preview-live i{width:6px;height:6px;border-radius:50%;background:#4d9c77;box-shadow:0 0 0 4px rgba(77,156,119,.11)}
+.preview-controls{display:flex;gap:5px;margin:12px 0 3px}
+.preview-tab{border:0;border-radius:999px;padding:6px 11px;background:transparent;color:var(--mid);font:600 .63rem var(--ff-body);cursor:pointer;transition:background .25s,color .25s,transform .25s}
+.preview-tab:hover{transform:translateY(-1px);color:var(--crimson)}
+.preview-tab.active{background:var(--charcoal);color:#fff;box-shadow:0 4px 12px rgba(30,26,20,.16)}
+.preview-chart{height:100px;overflow:hidden}
+.preview-chart svg{width:100%;height:100%;overflow:visible}
+.preview-gridline{fill:none;stroke:rgba(80,70,55,.13);stroke-width:1;stroke-dasharray:2 5}
+#preview-area{fill:url(#previewFill);transition:d .55s cubic-bezier(.2,.7,.2,1)}
+#preview-line{fill:none;stroke:var(--crimson);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:900;stroke-dashoffset:900;animation:drawPreview 1.6s .4s ease forwards;transition:d .55s cubic-bezier(.2,.7,.2,1)}
+#preview-endpoint{fill:var(--gold);stroke:#fff;stroke-width:3;transition:cx .5s,cy .5s}
+.preview-foot{display:flex;justify-content:space-between;gap:12px;padding-top:5px;border-top:1px solid rgba(200,151,58,.15);font-size:.58rem;color:var(--mid)}
+.preview-foot span:last-child{color:var(--gold3);font-weight:600}
+.hero-float-card{left:-29px;top:36%;bottom:auto;gap:11px;padding:13px 17px;border-radius:14px;border-color:rgba(255,255,255,.7);box-shadow:0 14px 38px rgba(31,29,24,.17);animation:heroCardFloat 5.5s ease-in-out infinite}
+.hero-float-mark{width:31px;height:31px;border-radius:10px}
+.hero-visual-caption{position:absolute;right:20px;top:20px;z-index:3;padding:7px 10px;border-radius:999px;background:rgba(31,29,24,.3);color:rgba(255,255,255,.88);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;backdrop-filter:blur(8px)}
+@keyframes previewLift{from{opacity:0;transform:translate3d(0,16px,0) scale(.985)}to{opacity:1;transform:translate3d(0,0,26px) scale(1)}}
+@keyframes drawPreview{to{stroke-dashoffset:0}}
+@keyframes heroVisualIn{from{opacity:0;filter:blur(4px)}to{opacity:1;filter:blur(0)}}
+.tools-section{position:relative;background:linear-gradient(180deg,#fbfaf6,#f7f1e6);padding:clamp(72px,8vw,112px) 0}
+.tools-section .phil-grid{gap:clamp(36px,6vw,84px)}
+.tools-section .tool-wrap{background:rgba(255,255,255,.91);border:1px solid rgba(200,151,58,.21);border-radius:24px;padding:clamp(24px,4vw,42px);box-shadow:0 26px 72px rgba(80,50,10,.12)}
+.tools-section .tool-wrap::before{background:radial-gradient(circle,rgba(200,151,58,.1),transparent 70%)}
+.tools-section .tool-tabs{gap:7px}
+.tools-section .tool-tab{border-radius:999px}
+.services-section,.stories-section{padding:clamp(74px,8vw,112px) 0}
+.services-section{background:#fff}
+.stories-section{background:linear-gradient(180deg,#f7f1e6,#fbfaf6)}
+.sec-hdr{margin-bottom:42px}
+.sec-title{letter-spacing:-.02em}
+.sgrid{gap:20px}
+.svc-card{min-height:250px;border-radius:19px;border-color:rgba(200,151,58,.19);background:linear-gradient(145deg,#fff,#fffdf8);padding:30px}
+.svc-card:hover{transform:translateY(-8px) perspective(900px) rotateX(2deg) rotateY(-1deg)}
+.test-card{background:rgba(255,255,255,.87)}
+.quote-section{padding:clamp(72px,8vw,110px) 0;background:linear-gradient(118deg,#f6eddd 0%,#fdfbf7 52%,#f1e4cd 100%);text-align:left;border-top:1px solid rgba(200,151,58,.22)}
+.quote-section::before{background:radial-gradient(ellipse at 78% 5%,rgba(200,151,58,.15),transparent 44%)}
+.quote-layout{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);align-items:center;gap:clamp(40px,7vw,100px)}
+.quote-copy .eyebrow{margin-bottom:18px}
+.quote-section .cta-title{max-width:520px;font-size:clamp(2.2rem,4.2vw,3.5rem);line-height:1.02;letter-spacing:-.03em;color:var(--charcoal)}
+.quote-section .cta-sub{margin:18px 0 23px;max-width:470px;font-size:1rem;line-height:1.7;color:var(--mid)}
+.quote-trust{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--mid);font-size:.67rem;font-weight:600;letter-spacing:.025em}
+.quote-trust>span:first-child{display:grid;place-items:center;width:21px;height:21px;border-radius:50%;background:rgba(77,156,119,.12);color:#367c58}
+.quote-divider{width:3px;height:3px;border-radius:50%;background:var(--gold)}
+.quote-whatsapp{display:inline-flex;gap:8px;margin-top:28px;color:var(--crimson);font-size:.78rem;font-weight:700}
+.quote-whatsapp:hover{gap:12px}
+.quote-form-card{position:relative;padding:clamp(22px,4vw,36px);border:1px solid rgba(200,151,58,.22);border-radius:24px;background:rgba(255,255,255,.95);box-shadow:0 25px 70px rgba(80,50,10,.12)}
+.quote-form-heading{display:flex;flex-direction:column;gap:4px;margin-bottom:19px}
+.quote-form-heading span{font-size:.58rem;font-weight:700;letter-spacing:.17em;color:var(--gold3)}
+.quote-form-heading strong{font-family:var(--ff-head);font-size:1.45rem;color:var(--charcoal)}
+.quote-fields-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.quote-field{display:flex;flex-direction:column;gap:6px;margin-bottom:13px;color:var(--mid);font-size:.65rem;font-weight:700;letter-spacing:.05em}
+.quote-field input,.quote-field select,.quote-field textarea{width:100%;padding:11px 13px;border:1px solid rgba(200,151,58,.23);border-radius:10px;background:#fff;color:var(--charcoal);font:400 .82rem var(--ff-body);outline:none;transition:border-color .25s,box-shadow .25s,transform .25s}
+.quote-field input:focus,.quote-field select:focus,.quote-field textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,151,58,.12)}
+.quote-field textarea{resize:vertical;min-height:74px}
+.quote-submit{width:100%;justify-content:center;border-radius:999px;padding:14px 20px}
+.quote-submit:disabled{opacity:.7;cursor:wait}
+.quote-form-error{margin:12px 0 0;color:var(--crimson);font-size:.75rem}
+.quote-form-success{display:flex;flex-direction:column;align-items:center;gap:8px;padding:30px 16px;border:1px solid rgba(77,156,119,.2);border-radius:14px;background:#f2faf5;text-align:center;color:var(--charcoal)}
+.quote-form-success[hidden],.quote-form-error[hidden]{display:none}
+.quote-success-mark{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#4d9c77;color:#fff;font-size:1.3rem}
+.quote-form-success>span:last-child{color:var(--mid);font-size:.85rem}
+.quote-privacy{margin-top:10px;text-align:center;color:var(--lt);font-size:.61rem}
+.quote-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+@media(max-width:940px){
+  .hero{min-height:0;padding:34px 0 64px}
+  .hero-layout{grid-template-columns:1fr;gap:38px}
+  .hero-copy{max-width:760px}
+  .hero-title{max-width:14ch;font-size:clamp(3.3rem,8vw,5rem)}
+  .hero-visual{width:min(100%,820px);margin:0 auto}
+  .quote-layout{grid-template-columns:1fr;gap:30px}
+  .quote-copy{max-width:760px}
+}
+@media(max-width:600px){
+  .hero{padding:25px 0 48px}
+  .hero-inner{padding:24px clamp(20px,5vw,30px)}
+  .hero-layout{gap:28px}
+  .hero-title{max-width:12ch;font-size:clamp(3rem,12vw,4.2rem)}
+  .hero-badge{max-width:100%;margin-bottom:22px}
+  .hero-proof{margin-top:30px;padding-top:16px}
+  .hero-proof>div{padding:0 10px}
+  .hero-proof strong{font-size:1.1rem}
+  .hero-proof span{font-size:.5rem;letter-spacing:.03em;white-space:normal;line-height:1.3}
+  .hero-visual{padding:7px;border-radius:23px}
+  .hero-image-frame{aspect-ratio:1.15;border-radius:17px}
+  .hero-float-card{display:none}
+  .hero-float-copy small{font-size:.48rem}
+  .hero-float-copy strong{font-size:.68rem}
+  .hero-visual-caption{top:13px;right:13px;font-size:.45rem}
+  .hero-product-preview{left:5%;right:5%;bottom:7%;padding:12px 13px 9px;border-radius:14px}
+  .preview-chart{height:76px}
+  .preview-tab{padding:6px 8px;font-size:.58rem}
+  .preview-foot{font-size:.5rem}
+  .quote-fields-two{grid-template-columns:1fr;gap:0}
+  .quote-form-card{padding:22px 18px;border-radius:19px}
+  .tools-section .phil-grid{grid-template-columns:1fr}
+}
+@media(max-width:380px){
+  .hero-proof>div{padding:0 7px}
+  .hero-proof strong{font-size:1rem}
+  .preview-foot span:last-child{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-visual,.hero-product-preview{animation:none!important}
+  .hero-art{transition:none!important}
+  #preview-line{animation:none!important;stroke-dashoffset:0!important}
+}
+
 </style>
 </head>
 <body>
@@ -669,39 +817,60 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
   <div class="hero-dots" aria-hidden="true"></div>
   <div class="hero-orb1" aria-hidden="true"></div>
   <div class="hero-orb2" aria-hidden="true"></div>
-  <div class="hero-ridges" aria-hidden="true">
-    <svg viewBox="0 0 800 260" preserveAspectRatio="none" focusable="false">
-      <defs>
-        <linearGradient id="heroRidgeBack" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E8D6B6" stop-opacity=".42"/><stop offset="1" stop-color="#F7F0E4" stop-opacity=".04"/></linearGradient>
-        <linearGradient id="heroRidgeFront" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D8C9A8" stop-opacity=".28"/><stop offset="1" stop-color="#FDFAF4" stop-opacity=".02"/></linearGradient>
-      </defs>
-      <path class="ridge-fill ridge-fill-back" d="M0 206 C86 169 147 75 241 94 C327 111 362 199 448 187 C550 173 587 71 682 83 C734 89 771 121 800 114 V260 H0Z" fill="url(#heroRidgeBack)"/>
-      <path class="ridge-fill ridge-fill-front" d="M0 232 C103 198 162 143 246 151 C330 159 369 219 471 214 C568 208 619 150 709 153 C744 154 775 169 800 176 V260 H0Z" fill="url(#heroRidgeFront)"/>
-      <path class="ridge-line ridge-line-back" pathLength="1000" d="M0 206 C86 169 147 75 241 94 C327 111 362 199 448 187 C550 173 587 71 682 83 C734 89 771 121 800 114"/>
-      <path class="ridge-line ridge-line-front" pathLength="1000" d="M0 232 C103 198 162 143 246 151 C330 159 369 219 471 214 C568 208 619 150 709 153 C744 154 775 169 800 176"/>
-    </svg>
-  </div>
   <div class="container hero-inner hero-layout">
     <div class="hero-copy">
       <div class="hero-badge"><div class="hbdot"></div><span>SEBI Registered &middot; Motilal Oswal Partner &middot; Est. 2010</span></div>
       <h1 class="display hero-title">
-        <span class="hero-title-mask"><span>Build Your Wealth With</span></span>
-        <span class="hero-title-mask"><em>Discipline, Strategy &amp; Trust</em></span>
+        <span class="hero-title-mask"><span>Invest with clarity.</span></span>
+        <span class="hero-title-mask"><em>Grow with confidence.</em></span>
       </h1>
-      <p class="hero-sub reveal d1">10+ years of experience &nbsp;|&nbsp; &#8377;200 Cr+ assets under advisory &nbsp;|&nbsp; trusted by 2000+ clients across India</p>
+      <p class="hero-sub reveal d1">Research-led guidance for stock investing, mutual funds, portfolio management and long-term financial planning.</p>
       <div class="hero-btns reveal d2">
-        <a href="contact.html" class="btn bc blg hero-cta-primary">&#128200; Open Demat Account</a>
-        <a href="contact.html" class="btn bo blg">Book Free Consultation</a>
+        <a href="#services" class="btn bc blg hero-cta-primary">Explore Our Services <span aria-hidden="true">&#8594;</span></a>
+        <a href="#home-quote" class="btn bo blg">Book Free Consultation</a>
+      </div>
+      <div class="hero-proof reveal d3" aria-label="Investo Experts experience">
+        <div><strong>10+</strong><span>years of experience</span></div>
+        <div><strong>&#8377;200 Cr+</strong><span>assets under advisory</span></div>
+        <div><strong>2,000+</strong><span>clients across India</span></div>
       </div>
     </div>
-    <div class="hero-visual">
+    <div class="hero-visual" data-tilt>
       <div class="hero-image-frame">
-        <img class="hero-art" src="images/homepage-fintech-visual.png" alt="Colourful glass portfolio dashboards and flowing forms representing thoughtful wealth planning" width="1536" height="1024" fetchpriority="high" decoding="async">
+        <video class="hero-art" autoplay muted loop playsinline preload="metadata" poster="images/stock-investing-poster.png" aria-label="An investor reviewing stock market charts and investment data">
+          <!-- Stock market analysis footage by Tima Miroshnichenko via Pexels, licensed for commercial use. -->
+          <source src="https://videos.pexels.com/video-files/7580275/7580275-uhd_4096_2160_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="hero-video-wash" aria-hidden="true"></div>
+        <div class="hero-product-preview">
+          <div class="preview-topline">
+            <div><span class="preview-kicker">INVESTO MARKET VIEW</span><strong id="preview-title">Market overview</strong></div>
+            <span class="preview-live"><i></i> ILLUSTRATIVE</span>
+          </div>
+          <div class="preview-controls" role="tablist" aria-label="Investment preview">
+            <button type="button" class="preview-tab active" role="tab" aria-selected="true" data-view="market">Market</button>
+            <button type="button" class="preview-tab" role="tab" aria-selected="false" data-view="portfolio">Portfolio</button>
+            <button type="button" class="preview-tab" role="tab" aria-selected="false" data-view="goals">Goals</button>
+          </div>
+          <div class="preview-chart" aria-label="Illustrative investment chart">
+            <svg viewBox="0 0 620 210" preserveAspectRatio="none" role="img" aria-label="Illustrative stock market trend line">
+              <defs>
+                <linearGradient id="previewFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9B1C2E" stop-opacity=".2"/><stop offset="1" stop-color="#9B1C2E" stop-opacity="0"/></linearGradient>
+              </defs>
+              <path class="preview-gridline" d="M0 35H620M0 85H620M0 135H620M0 185H620"/>
+              <path id="preview-area" d="M0 174 C45 164 50 126 95 136 S150 151 190 111 248 119 280 95 330 119 367 82 412 102 448 63 502 74 540 44 590 54 620 20 V210 H0Z"/>
+              <path id="preview-line" d="M0 174 C45 164 50 126 95 136 S150 151 190 111 248 119 280 95 330 119 367 82 412 102 448 63 502 74 540 44 590 54 620 20"/>
+              <circle id="preview-endpoint" cx="620" cy="20" r="5"/>
+            </svg>
+          </div>
+          <div class="preview-foot"><span id="preview-caption">A clearer view of market movement</span><span>Research-led planning</span></div>
+        </div>
       </div>
       <div class="hero-float-card" aria-hidden="true">
         <span class="hero-float-mark"><i></i><i></i><i></i></span>
-        <span class="hero-float-copy"><small>WEALTH PLANNING</small><strong>Built around your goals</strong></span>
+        <span class="hero-float-copy"><small>YOUR FINANCIAL PLAN</small><strong>Built around your goals</strong></span>
       </div>
+      <span class="hero-visual-caption">Stock market analysis · Visual preview</span>
     </div>
   </div>
 </section>
@@ -819,7 +988,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
 </section>
 
 <!-- SERVICES -->
-<section class="s-alt services-section">
+<section class="s-alt services-section" id="services">
   <div class="container">
     <div class="sec-hdr c">
       <span class="eyebrow reveal d1">What We Offer</span>
@@ -839,7 +1008,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="s-alt stories-section">
+<section class="s-alt stories-section" id="stories">
   <div class="container">
     <div class="sec-hdr c"><span class="eyebrow reveal d1">Client Stories</span><h2 class="hl sec-title reveal">Trusted by 2000+ Investors</h2><div class="gl c"></div></div>
     <div class="tgrid">
@@ -850,17 +1019,60 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<div class="cta-s cta-crimson">
-  <div class="container">
-    <h2 class="cta-title reveal">Ready to Start Your Wealth Journey?</h2>
-    <p class="cta-sub reveal d1">Book a free 30-minute consultation. No obligation &mdash; just honest, research-backed guidance.</p>
-    <div class="cta-btns reveal d2">
-      <a href="contact.html" class="btn bg blg">Book Free Consultation</a>
-      <a href="https://wa.me/918386002000?text=Hello%20Investo%20Experts%2C%20I%20would%20like%20to%20discuss%20investment%20services." class="btn bow blg" target="_blank">&#128172; WhatsApp Us</a>
+<!-- CONSULTATION / QUOTE REQUEST -->
+<section class="cta-s cta-crimson quote-section" id="home-quote">
+  <div class="container quote-layout">
+    <div class="quote-copy">
+      <span class="eyebrow">A personal conversation</span>
+      <h2 class="cta-title">Let’s plan your next step.</h2>
+      <p class="cta-sub">Tell us what you’re working toward. Our team will contact you to understand your goals and discuss the right service.</p>
+      <div class="quote-trust"><span aria-hidden="true">&#10003;</span> No obligation <span class="quote-divider"></span> Serving clients across India</div>
+      <a class="quote-whatsapp" href="https://wa.me/918386002000?text=Hello%20Investo%20Experts%2C%20I%20would%20like%20to%20discuss%20investment%20services." target="_blank" rel="noopener">Prefer WhatsApp? Message our team <span aria-hidden="true">&#8599;</span></a>
+    </div>
+    <div class="quote-form-card">
+      <div class="quote-form-heading"><span>FREE CONSULTATION</span><strong>Share a few details</strong></div>
+      <form id="home-consult-form" name="home-contact" action="https://formspree.io/f/moejpdny" method="POST">
+        <div aria-hidden="true" class="quote-honeypot"><label>Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+        <div class="quote-fields-two">
+          <label class="quote-field">Full Name *<input name="name" type="text" placeholder="Your full name" autocomplete="name" required></label>
+          <label class="quote-field">Phone *<input name="phone" type="tel" placeholder="+91 83860 02000" autocomplete="tel" required></label>
+        </div>
+        <label class="quote-field">Email<input name="email" type="email" placeholder="you@email.com" autocomplete="email"></label>
+        <div class="quote-fields-two">
+          <label class="quote-field">Service Interested In
+            <select name="service">
+              <option value="">Select a service</option>
+              <option>Stock Broking / Demat Account</option>
+              <option>Portfolio Management (PMS)</option>
+              <option>Mutual Fund Advisory</option>
+              <option>Financial Planning</option>
+              <option>Wealth Advisory</option>
+              <option>IPO / Bonds</option>
+            </select>
+          </label>
+          <label class="quote-field">Investment Amount
+            <select name="amount">
+              <option value="">Select range</option>
+              <option>Below &#8377;5 Lakhs</option>
+              <option>&#8377;5 &#8211; 25 Lakhs</option>
+              <option>&#8377;25 &#8211; 1 Crore</option>
+              <option>Above &#8377;1 Crore</option>
+            </select>
+          </label>
+        </div>
+        <label class="quote-field">Message<textarea name="message" rows="3" placeholder="What would you like help planning?"></textarea></label>
+        <button type="submit" id="home-consult-submit" class="btn bc quote-submit">Request a consultation <span aria-hidden="true">&#8594;</span></button>
+      </form>
+      <p id="home-form-error" class="quote-form-error" role="alert" hidden>We couldn’t send that just now. Please try again or message us on <a href="https://wa.me/919799922051" target="_blank" rel="noopener">WhatsApp</a>.</p>
+      <div id="home-form-ok" class="quote-form-success" role="status" aria-live="polite" tabindex="-1" hidden>
+        <span class="quote-success-mark" aria-hidden="true">&#10003;</span>
+        <strong>Thanks — your request has been received.</strong>
+        <span>Our team will get back to you soon.</span>
+      </div>
+      <p class="quote-privacy">By submitting, you agree that Investo Experts may contact you about this request.</p>
     </div>
   </div>
-</div>
+</section>
 
 <footer>
   <div class="fgrid">
@@ -1189,8 +1401,80 @@ function filterPosts(cat,btn){
   btn.className='btn bg bsm';btn.style.borderRadius='20px';
 }
 </script>
-<!-- HERO POINTER MOTION -->
+
+
 <script>
+(function(){
+  var tabs=document.querySelectorAll('.preview-tab');
+  var line=document.getElementById('preview-line');
+  var area=document.getElementById('preview-area');
+  var endpoint=document.getElementById('preview-endpoint');
+  var title=document.getElementById('preview-title');
+  var caption=document.getElementById('preview-caption');
+  if(!tabs.length||!line||!area)return;
+  var views={
+    market:{title:'Market overview',caption:'A clearer view of market movement',line:'M0 174 C45 164 50 126 95 136 S150 151 190 111 248 119 280 95 330 119 367 82 412 102 448 63 502 74 540 44 590 54 620 20',x:620,y:20},
+    portfolio:{title:'Portfolio mix',caption:'See how your investments are balanced',line:'M0 158 C48 150 65 121 102 129 S158 119 198 133 252 103 293 110 340 74 379 90 427 71 465 78 511 45 554 61 594 40 620 32',x:620,y:32},
+    goals:{title:'Long-term goals',caption:'Connect today’s plan to future goals',line:'M0 181 C48 173 64 166 102 159 S158 149 198 138 252 132 293 113 340 111 379 91 427 87 465 66 511 64 554 40 594 35 620 17',x:620,y:17}
+  };
+  tabs.forEach(function(tab){
+    tab.addEventListener('click',function(){
+      var key=tab.getAttribute('data-view');
+      var view=views[key];
+      if(!view)return;
+      tabs.forEach(function(other){
+        var active=other===tab;
+        other.classList.toggle('active',active);
+        other.setAttribute('aria-selected',active?'true':'false');
+      });
+      title.textContent=view.title;
+      caption.textContent=view.caption;
+      line.setAttribute('d',view.line);
+      area.setAttribute('d',view.line+' V210 H0Z');
+      endpoint.setAttribute('cx',view.x);
+      endpoint.setAttribute('cy',view.y);
+      line.style.animation='none';
+      line.getBoundingClientRect();
+      line.style.animation='';
+    });
+  });
+})();
+
+(function(){
+  var video=document.querySelector('.hero-art');
+  if(video&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    video.pause();
+    video.removeAttribute('autoplay');
+  }
+})();
+
+(function(){
+  var form=document.getElementById('home-consult-form');
+  var success=document.getElementById('home-form-ok');
+  var error=document.getElementById('home-form-error');
+  var button=document.getElementById('home-consult-submit');
+  if(!form||!button)return;
+  form.addEventListener('submit',async function(event){
+    event.preventDefault();
+    if(!form.reportValidity())return;
+    error.hidden=true;
+    button.disabled=true;
+    button.innerHTML='Sending your request…';
+    try{
+      var response=await fetch(form.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)});
+      if(!response.ok)throw new Error('submission_failed');
+      form.hidden=true;
+      success.hidden=false;
+      success.focus({preventScroll:true});
+    }catch(e){
+      error.hidden=false;
+    }finally{
+      button.disabled=false;
+      button.innerHTML='Request a consultation <span aria-hidden="true">&#8594;</span>';
+    }
+  });
+})();
+
 (function(){
   var visual=document.querySelector('.hero-visual');
   if(!visual||!window.matchMedia('(hover:hover) and (pointer:fine)').matches||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
@@ -1201,8 +1485,8 @@ function filterPosts(cat,btn){
     var y=(event.clientY-rect.top)/rect.height-.5;
     cancelAnimationFrame(frame);
     frame=requestAnimationFrame(function(){
-      visual.style.setProperty('--tilt-x',(-y*3).toFixed(2)+'deg');
-      visual.style.setProperty('--tilt-y',(x*4).toFixed(2)+'deg');
+      visual.style.setProperty('--tilt-x',(-y*2.2).toFixed(2)+'deg');
+      visual.style.setProperty('--tilt-y',(x*3.2).toFixed(2)+'deg');
     });
   });
   visual.addEventListener('pointerleave',function(){
