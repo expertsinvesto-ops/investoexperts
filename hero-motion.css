@@ -5,17 +5,5 @@
 #nav .nav-link:hover,#nav .nav-link:focus-visible{transform:translateY(-4px);color:var(--crimson);background:linear-gradient(135deg,rgba(255,255,255,.96),rgba(245,239,224,.62));border-color:rgba(200,151,58,.36);box-shadow:0 8px 22px rgba(80,50,10,.13),inset 0 1px 0 #fff;backdrop-filter:blur(16px)}
 #nav .nav-link:hover::after,#nav .nav-link:focus-visible::after{width:56%}
 #nav .nav-link.active{color:var(--crimson);background:rgba(200,151,58,.08);border-color:rgba(200,151,58,.15)}
-.hero-image-frame.motion-scene{background:radial-gradient(ellipse at 60% 35%,#3b3025,#151b21 72%);isolation:isolate}
-.hero-motion-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
-.motion-scene .hero-video-wash{background:linear-gradient(180deg,transparent 30%,rgba(11,18,25,.25));pointer-events:none}
-.motion-scene .hero-product-preview{background:rgba(253,250,244,.9);border-color:rgba(255,255,255,.75);box-shadow:0 16px 38px #0003;backdrop-filter:blur(18px)}
-.motion-scene .hero-product-preview .preview-chart{height:82px}
-.motion-label{position:absolute;top:8%;left:7%;color:#e2b560;font:600 .6rem var(--ff-body);letter-spacing:.2em;z-index:2;pointer-events:none}
-.motion-label strong{display:block;font-size:1.25rem;color:#fff4de;font-weight:500;letter-spacing:.01em;margin-top:7px}
-.hero-motion-toggle{position:absolute;z-index:5;right:18px;top:18px;border:1px solid #ffffff50;background:#ffffff12;color:#fff6e4;border-radius:50%;height:34px;width:34px;cursor:pointer;backdrop-filter:blur(12px);font-size:13px;transition:background .2s,transform .2s}
-.hero-motion-toggle:hover{background:#ffffff30;transform:scale(1.08)}
-.hero-motion-toggle:focus-visible{outline:2px solid var(--gold2);outline-offset:4px}
-.hero-visual-caption{display:none}
 @media(min-width:769px) and (max-width:1150px){#nav .nav-link{padding:9px 5px;font-size:.62rem}#nav .nav-links{gap:0}}
-@media(max-width:600px){.motion-label{font-size:.48rem;top:7%}.motion-label strong{font-size:1rem}.hero-motion-toggle{right:13px;top:13px;height:30px;width:30px}.motion-scene .hero-product-preview .preview-chart{height:65px}}
 @media(prefers-reduced-motion:reduce){#nav .nav-link{transition:none}#nav .nav-link:hover,#nav .nav-link:focus-visible{transform:none}}
