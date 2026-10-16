@@ -70,7 +70,7 @@ function donut(x,y,outer,inner,segments,bg=C.white){let start=-Math.PI/2;for(con
 function tag(s,x,y,fill,color){const w=width(s,7)+16;rect(x,y,w,18,fill);text(s,x+8,y+5,7,color,true);}
 function bar(x,y,w,value,color){rect(x,y,w,6,'#eaf0f7');rect(x,y,Math.max(0,Math.min(100,value))/100*w,6,color);}
 function footer(){line(36,798,559,798);text('INVESTO EXPERTS',36,811,7,C.ink,true);text('Private / Prepared from uploaded holdings',155,811,7,C.muted);text('PAGE '+(pages.length+1),559,811,7,C.muted,false,'right');pages.push(ops.join('\n'));ops=[];}
-function mast(section){rect(0,0,595,6,C.blue);text('INVESTO EXPERTS',36,31,11,'#9b1c2e',true);text('PORTFOLIO CHECK-UP',559,31,8,C.muted,true,'right');text(section,36,56,8,C.muted);text(r.date,559,56,8,C.muted,false,'right');}
+function mast(section){rect(0,0,595,6,C.blue);text('INVESTO EXPERTS',36,31,11,'#245cf6',true);text('PORTFOLIO CHECK-UP',559,31,8,C.muted,true,'right');text(section,36,56,8,C.muted);text(r.date,559,56,8,C.muted,false,'right');}
 const fmoney=n=>n===null?'Not available':clean(money(n)),shortMoney=n=>n===null?'Not available':new Intl.NumberFormat('en-IN',{maximumFractionDigits:0}).format(n),pcolor=n=>n===null?C.muted:n<0?C.red:n>0?C.green:C.muted;
 const notes=reportNotes(r),gains=r.holdings.filter(h=>h.pnl>0).length,losses=r.holdings.filter(h=>h.pnl<0).length,unchanged=r.holdings.filter(h=>h.pnl===0).length;
 // 01 / Overview
