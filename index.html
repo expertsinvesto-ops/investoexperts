@@ -838,9 +838,9 @@ body{background:#fbfaf6}
     </div>
     <div class="hero-visual">
       <div class="hero-image-frame">
-        <!-- Aerial city footage by Davis Bae via Pexels: https://www.pexels.com/video/drone-shot-of-skyscrapers-in-city-10270662/ -->
-        <video class="hero-art" autoplay muted loop playsinline controls preload="metadata" aria-label="Aerial video of a modern city skyline">
-          <source src="https://videos.pexels.com/video-files/10270662/10270662-uhd_2560_1440_24fps.mp4" type="video/mp4">
+        <!-- User-selected Pexels clip: 7580445-uhd_4096_2160_25fps.mp4 -->
+        <video class="hero-art" autoplay muted loop playsinline disablepictureinpicture disableremoteplayback preload="auto" aria-label="Stock market video">
+          <source src="https://videos.pexels.com/video-files/7580445/7580445-uhd_4096_2160_25fps.mp4" type="video/mp4">
           Your browser does not support embedded video.
         </video>
       </div>
@@ -1413,13 +1413,7 @@ function filterPosts(cat,btn){
   });
 })();
 
-(function(){
-  var video=document.querySelector('.hero-art');
-  if(video&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    video.pause();
-    video.removeAttribute('autoplay');
-  }
-})();
+
 
 (function(){
   var form=document.getElementById('home-consult-form');
