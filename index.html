@@ -795,6 +795,7 @@ body{background:#fbfaf6}
 <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
 <link rel="stylesheet" href="responsive-parity.css?v=1">
 <style id="local-service-heading">#home .hero-title{max-width:20ch;font-size:clamp(2.1rem,4.3vw,3.6rem)}@media(max-width:768px){#home .hero-title{max-width:none;font-size:clamp(2rem,8.3vw,3.1rem)}}</style>
+<link rel="stylesheet" href="portfolio-entry.css?v=1">
 </head>
 <body>
 <nav id="nav">
@@ -856,9 +857,10 @@ body{background:#fbfaf6}
       </h1>
       <p class="hero-sub reveal d1">Based in Jaipur, we help individuals, families and business owners explore stock broking through our Motilal Oswal partnership, mutual fund distribution and long-term financial planning.</p>
       <div class="hero-btns reveal d2">
-        <a href="#services" class="btn bc blg hero-cta-primary">Explore Our Services <span aria-hidden="true">&#8594;</span></a>
+        <a href="portfolio-xray.html" class="btn blg hero-cta-primary portfolio-hero-button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C9 7 5 10 5 15a7 7 0 0 0 14 0c0-5-4-8-7-13Z"/><path d="m8 15 3-3 2 2 3-4"/></svg>Analyse Your Portfolio <span aria-hidden="true">&#8594;</span></a>
         <a href="#home-quote" class="btn bo blg">Book Free Consultation</a>
       </div>
+      <p class="portfolio-hero-note">Free portfolio check-up · Upload Excel, CSV, PDF or a screenshot</p>
       <div class="hero-proof" aria-label="Investo Experts business figures"><div><strong>12+ years</strong><span>Experience</span></div><div><strong>₹270+ crore</strong><span>AUM</span></div><div><strong>2,100</strong><span>Clients</span></div></div>
     </div>
     <div class="hero-footage">
@@ -876,7 +878,22 @@ body{background:#fbfaf6}
 
 
 
-<section style="padding:38px 5%;background:#292c26;color:#f4efe5"><div class="container"><span class="eyebrow" style="color:#d8bc86">Portfolio X-Ray</span><h2 class="hl">Understand what you own.</h2><p style="margin:14px 0 22px">Explore concentration, sector exposure and diversification. Your holdings stay in your browser.</p><a class="btn bg" href="portfolio-xray.html">Analyse Your Portfolio &#8594;</a></div></section>\n<!-- FREE FINANCIAL TOOLS -->
+<section class="portfolio-feature" aria-labelledby="portfolio-feature-title">
+  <div class="container portfolio-feature-inner">
+    <div class="portfolio-feature-copy">
+      <span class="eyebrow">YOUR PORTFOLIO. UNDERSTOOD.</span>
+      <h2 id="portfolio-feature-title">See the bigger picture.<br>In one upload.</h2>
+      <p>Turn your holdings report into a visual snapshot of allocation, concentration and profit or loss.</p>
+      <a class="portfolio-feature-button" href="portfolio-xray.html">Click here to analyse your portfolio <span aria-hidden="true">&#8594;</span></a>
+      <p class="portfolio-feature-privacy">Free to use &nbsp;·&nbsp; No signup &nbsp;·&nbsp; Processed on your device</p>
+    </div>
+    <div class="portfolio-preview" aria-hidden="true">
+      <div class="portfolio-preview-ring"><span>Portfolio<br>X-Ray</span></div>
+      <div class="portfolio-preview-labels"><span><i></i>See your allocation</span><span><i></i>Understand concentration</span><span><i></i>Explore profit &amp; loss</span></div>
+      <span class="portfolio-preview-caption">A clearer view of what you own</span>
+    </div>
+  </div>
+</section>\n<!-- FREE FINANCIAL TOOLS -->
 <section class="tools-section">
   <div class="container">
     <div class="phil-grid">
@@ -1484,5 +1501,18 @@ function filterPosts(cat,btn){
 })();
 </script>
 <script src="hero-motion.js"></script>
+<a class="portfolio-droplet" href="portfolio-xray.html" aria-label="Analyse your portfolio - open the portfolio analyser" aria-hidden="true" tabindex="-1">
+  <span class="portfolio-drop-label">Analyse your portfolio<small>Tap for a clearer picture</small></span>
+  <span class="portfolio-drop-shell" aria-hidden="true"><span class="portfolio-drop-core"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-10M15 5h6v6"/><path d="M5 3v4M3 5h4"/></svg></span></span>
+</a>
+<div class="portfolio-portal" id="portfolio-portal" aria-hidden="true" hidden>
+  <span class="portfolio-portal-ring" aria-hidden="true"></span><span class="portfolio-portal-ring" aria-hidden="true"></span><span class="portfolio-portal-ring" aria-hidden="true"></span>
+  <div class="portfolio-portal-copy" role="status" aria-live="polite">
+    <span class="portfolio-portal-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C9 7 5 10 5 15a7 7 0 0 0 14 0c0-5-4-8-7-13Z"/><path d="m8 15 3-3 2 2 3-4"/></svg></span>
+    <strong>A clearer picture awaits.</strong><p>Opening your portfolio workspace…</p><small>INVESTO EXPERTS</small>
+  </div>
+</div>
+
+<script src="portfolio-entry.js?v=1"></script>
 </body>
 </html>
