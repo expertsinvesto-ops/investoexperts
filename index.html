@@ -712,6 +712,7 @@ body{background:#fbfaf6}
 }
 
 </style>
+<link rel="stylesheet" href="hero-motion.css">
 </head>
 <body>
 <nav id="nav">
@@ -836,11 +837,8 @@ body{background:#fbfaf6}
       </div>
     </div>
     <div class="hero-visual" data-tilt>
-      <div class="hero-image-frame">
-        <video class="hero-art" autoplay muted loop playsinline preload="metadata" poster="images/stock-investing-poster.png" aria-label="An investor reviewing stock market charts and investment data">
-          <!-- Stock market analysis footage by Tima Miroshnichenko via Pexels, licensed for commercial use. -->
-          <source src="https://videos.pexels.com/video-files/7580275/7580275-uhd_4096_2160_25fps.mp4" type="video/mp4">
-        </video>
+      <div class="hero-image-frame motion-scene">
+        <canvas class="hero-motion-canvas" id="investo-motion" role="img" aria-label="Illustrative animated global markets with a rotating gold globe, candlesticks and a flowing trend line"></canvas><div class="motion-label">INVESTO EXPERTS<strong>A world of possibilities.</strong></div><button type="button" class="hero-motion-toggle" id="hero-motion-toggle" aria-label="Pause finance animation" aria-pressed="false">Ⅱ</button>
         <div class="hero-video-wash" aria-hidden="true"></div>
         <div class="hero-product-preview">
           <div class="preview-topline">
@@ -1495,5 +1493,6 @@ function filterPosts(cat,btn){
   });
 })();
 </script>
+<script src="hero-motion.js"></script>
 </body>
 </html>
