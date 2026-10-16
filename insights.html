@@ -28,7 +28,7 @@
 </head>
 <body>
 <div style="height:46px;overflow:hidden;border-bottom:2px solid #C8973A;position:fixed;top:0;left:0;right:0;width:100%;z-index:1001">
-  <div class="tradingview-widget-container" style="height:46px">
+  <div class="tradingview-widget-container ticker-container" style="height:46px;min-width:768px">
     <div class="tradingview-widget-container__widget"></div>
     <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
     {
@@ -76,7 +76,8 @@
 ],
       "showSymbolLogo": true,
       "isTransparent": false,
-      "displayMode": "adaptive",
+      "displayMode": "regular",
+      "isMoving": true,
       "colorTheme": "dark",
       "locale": "en"
     }
