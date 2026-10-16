@@ -712,6 +712,7 @@ body{background:#fbfaf6}
 }
 
 </style>
+<link rel="stylesheet" href="hero-motion.css">
 </head>
 <body>
 <nav id="nav">
@@ -835,42 +836,14 @@ body{background:#fbfaf6}
         <div><strong>2,000+</strong><span>clients across India</span></div>
       </div>
     </div>
-    <div class="hero-visual" data-tilt>
+    <div class="hero-visual">
       <div class="hero-image-frame">
-        <video class="hero-art" autoplay muted loop playsinline preload="metadata" poster="images/stock-investing-poster.png" aria-label="An investor reviewing stock market charts and investment data">
-          <!-- Stock market analysis footage by Tima Miroshnichenko via Pexels, licensed for commercial use. -->
-          <source src="https://videos.pexels.com/video-files/7580275/7580275-uhd_4096_2160_25fps.mp4" type="video/mp4">
+        <!-- Aerial city footage by Davis Bae via Pexels: https://www.pexels.com/video/drone-shot-of-skyscrapers-in-city-10270662/ -->
+        <video class="hero-art" autoplay muted loop playsinline controls preload="metadata" aria-label="Aerial video of a modern city skyline">
+          <source src="https://videos.pexels.com/video-files/10270662/10270662-uhd_2560_1440_24fps.mp4" type="video/mp4">
+          Your browser does not support embedded video.
         </video>
-        <div class="hero-video-wash" aria-hidden="true"></div>
-        <div class="hero-product-preview">
-          <div class="preview-topline">
-            <div><span class="preview-kicker">INVESTO MARKET VIEW</span><strong id="preview-title">Market overview</strong></div>
-            <span class="preview-live"><i></i> ILLUSTRATIVE</span>
-          </div>
-          <div class="preview-controls" role="tablist" aria-label="Investment preview">
-            <button type="button" class="preview-tab active" role="tab" aria-selected="true" data-view="market">Market</button>
-            <button type="button" class="preview-tab" role="tab" aria-selected="false" data-view="portfolio">Portfolio</button>
-            <button type="button" class="preview-tab" role="tab" aria-selected="false" data-view="goals">Goals</button>
-          </div>
-          <div class="preview-chart" aria-label="Illustrative investment chart">
-            <svg viewBox="0 0 620 210" preserveAspectRatio="none" role="img" aria-label="Illustrative stock market trend line">
-              <defs>
-                <linearGradient id="previewFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9B1C2E" stop-opacity=".2"/><stop offset="1" stop-color="#9B1C2E" stop-opacity="0"/></linearGradient>
-              </defs>
-              <path class="preview-gridline" d="M0 35H620M0 85H620M0 135H620M0 185H620"/>
-              <path id="preview-area" d="M0 174 C45 164 50 126 95 136 S150 151 190 111 248 119 280 95 330 119 367 82 412 102 448 63 502 74 540 44 590 54 620 20 V210 H0Z"/>
-              <path id="preview-line" d="M0 174 C45 164 50 126 95 136 S150 151 190 111 248 119 280 95 330 119 367 82 412 102 448 63 502 74 540 44 590 54 620 20"/>
-              <circle id="preview-endpoint" cx="620" cy="20" r="5"/>
-            </svg>
-          </div>
-          <div class="preview-foot"><span id="preview-caption">A clearer view of market movement</span><span>Research-led planning</span></div>
-        </div>
       </div>
-      <div class="hero-float-card" aria-hidden="true">
-        <span class="hero-float-mark"><i></i><i></i><i></i></span>
-        <span class="hero-float-copy"><small>YOUR FINANCIAL PLAN</small><strong>Built around your goals</strong></span>
-      </div>
-      <span class="hero-visual-caption">Stock market analysis · Visual preview</span>
     </div>
   </div>
 </section>
@@ -1495,5 +1468,6 @@ function filterPosts(cat,btn){
   });
 })();
 </script>
+<script src="hero-motion.js"></script>
 </body>
 </html>

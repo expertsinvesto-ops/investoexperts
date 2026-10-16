@@ -1,0 +1,9 @@
+/* Investo Experts: glass navigation and a self-contained finance motion scene. */
+#nav .nav-link{display:inline-flex;align-items:center;padding:10px 11px;border:1px solid transparent;border-radius:12px;isolation:isolate;transition:transform .28s ease,background .28s ease,box-shadow .28s ease,border-color .28s ease;color:var(--mid)}
+#nav .nav-links{gap:2px}
+#nav .nav-link::after{left:22%;bottom:5px;width:0;background:var(--gold);height:2px;border-radius:2px}
+#nav .nav-link:hover,#nav .nav-link:focus-visible{transform:translateY(-4px);color:var(--crimson);background:linear-gradient(135deg,rgba(255,255,255,.96),rgba(245,239,224,.62));border-color:rgba(200,151,58,.36);box-shadow:0 8px 22px rgba(80,50,10,.13),inset 0 1px 0 #fff;backdrop-filter:blur(16px)}
+#nav .nav-link:hover::after,#nav .nav-link:focus-visible::after{width:56%}
+#nav .nav-link.active{color:var(--crimson);background:rgba(200,151,58,.08);border-color:rgba(200,151,58,.15)}
+@media(min-width:769px) and (max-width:1150px){#nav .nav-link{padding:9px 5px;font-size:.62rem}#nav .nav-links{gap:0}}
+@media(prefers-reduced-motion:reduce){#nav .nav-link{transition:none}#nav .nav-link:hover,#nav .nav-link:focus-visible{transform:none}}
