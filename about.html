@@ -423,65 +423,18 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.55);padding:64px 5% 24
 <meta name="twitter:description" content="Meet the Investo Experts team in Jaipur and learn about our research-led approach, investment philosophy and Motilal Oswal franchise partnership.">
 <meta name="twitter:image" content="https://investoexperts.com/images/investo-experts-logo.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://investoexperts.com/about.html#page","url":"https://investoexperts.com/about.html","name":"About Investo Experts | Wealth Management Team in Jaipur","description":"Meet the Investo Experts team in Jaipur and learn about our research-led approach, investment philosophy and Motilal Oswal franchise partnership.","isPartOf":{"@id":"https://investoexperts.com/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://investoexperts.com/"},{"@type":"ListItem","position":2,"name":"About Investo Experts","item":"https://investoexperts.com/about.html"}]}]}</script>
+<style id="market-ticker-v2">
+.market-ticker{position:fixed;top:0;left:0;right:0;width:100%;height:46px;z-index:1001;overflow:hidden;box-sizing:border-box;border-bottom:2px solid #C8973A;background:#fff}
+.market-ticker tv-ticker-tape{display:block;width:100%;height:44px}
+/* Touch must not leave a simulated hover pausing the live quotes. */
+@media(hover:none),(pointer:coarse){.market-ticker tv-ticker-tape{pointer-events:none}}
+</style>
+<script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
 </head>
 <body>
 <div class="tradingview-widget-container ticker-container" style="height:46px;min-width:768px">
-  <div class="tradingview-widget-container__widget"></div>
-
-  <script type="text/javascript"
-  src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
-  async>
-  {
-    "symbols": [
-  {
-    "proName": "BSE:SENSEX",
-    "title": "SENSEX"
-  },
-  {
-    "proName": "BSE:RELIANCE",
-    "title": "RELIANCE"
-  },
-  {
-    "proName": "BSE:TCS",
-    "title": "TCS"
-  },
-  {
-    "proName": "BSE:HDFCBANK",
-    "title": "HDFC BANK"
-  },
-  {
-    "proName": "BSE:INFY",
-    "title": "INFOSYS"
-  },
-  {
-    "proName": "BSE:ICICIBANK",
-    "title": "ICICI BANK"
-  },
-  {
-    "proName": "BSE:SBIN",
-    "title": "SBI"
-  },
-  {
-    "proName": "BSE:KOTAKBANK",
-    "title": "KOTAK BANK"
-  },
-  {
-    "proName": "BSE:WIPRO",
-    "title": "WIPRO"
-  },
-  {
-    "proName": "BSE:TMPV",
-    "title": "TATA MOTORS"
-  }
-],
-    "showSymbolLogo": false,
-    "isTransparent": false,
-    "displayMode": "regular",
-      "isMoving": true,
-    "colorTheme": "light",
-    "locale": "en"
-  }
-  </script>
+  <div class="market-ticker" role="region" aria-label="Market quotes">
+  <tv-ticker-tape symbols="BSE:SENSEX,BSE:RELIANCE,BSE:TCS,BSE:HDFCBANK,BSE:INFY,BSE:ICICIBANK,BSE:SBIN,BSE:KOTAKBANK,BSE:WIPRO,BSE:TMPV" hide-chart item-size="compact" theme="light" locale="en"></tv-ticker-tape>
 </div>
 
 <style>
