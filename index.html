@@ -715,20 +715,22 @@ body{background:#fbfaf6}
 <link rel="stylesheet" href="hero-motion.css?v=borderless-3">
 <style id="borderless-hero">
 
-.hero{isolation:isolate;background:#fbfaf6;min-height:720px;padding:74px 0 90px;overflow:hidden}
+.hero{isolation:isolate;background:#f2ebdf;min-height:720px;padding:74px 0 90px;overflow:hidden}
 .hero-inner.hero-layout{position:static;display:block;min-height:556px;padding-top:34px;padding-bottom:30px}
 .hero-copy{position:relative;z-index:2;max-width:620px}
 .hero-title{max-width:16ch}
 .hero-sub{max-width:540px}
 .hero-footage,.hero-footage:hover{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;transform:none;animation:none;filter:none;z-index:0;isolation:auto;pointer-events:none}
 .hero-footage::before{display:none}
-.hero-footage::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,#fbfaf6 0%,rgba(251,250,246,.98) 23%,rgba(251,250,246,.88) 38%,rgba(251,250,246,.40) 57%,rgba(251,250,246,.04) 80%),linear-gradient(180deg,#fbfaf6 0%,rgba(251,250,246,0) 15%,rgba(251,250,246,0) 73%,#fbfaf6 100%)}
-.hero-footage-surface{position:absolute;inset:0;aspect-ratio:auto;width:100%;height:100%;border:0;border-radius:0;overflow:hidden;background:#fbfaf6;line-height:0}
-.hero-art,.hero-footage:hover .hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:75% center;border:0;border-radius:0;transform:none;filter:saturate(.78);opacity:.88}
+.hero-footage::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,#f2ebdf 0%,rgba(242,235,223,.92) 23%,rgba(242,235,223,.75) 38%,rgba(242,235,223,.22) 57%,rgba(242,235,223,0) 80%),linear-gradient(180deg,#f2ebdf 0%,rgba(242,235,223,0) 15%,rgba(242,235,223,0) 73%,#f2ebdf 100%)}
+.hero-footage-surface{position:absolute;inset:0;aspect-ratio:auto;width:100%;height:100%;border:0;border-radius:0;overflow:hidden;background:#f2ebdf;line-height:0}
+.hero-art,.hero-footage:hover .hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:75% center;border:0;border-radius:0;transform:none;filter:contrast(1.14) saturate(.95) brightness(.88);opacity:1}
 .hero-dots,.hero-orb1,.hero-orb2,.hero-ridges{display:none}
-@media(max-width:940px){.hero{min-height:760px;padding:44px 0 80px}.hero-inner.hero-layout{min-height:630px}.hero-copy{max-width:680px}.hero-title{max-width:15ch}.hero-footage::after{background:linear-gradient(90deg,rgba(251,250,246,.96),rgba(251,250,246,.84) 44%,rgba(251,250,246,.42) 100%),linear-gradient(180deg,#fbfaf6 0%,transparent 25%,transparent 70%,#fbfaf6 100%)}}
-@media(max-width:600px){.hero{min-height:800px;padding:20px 0 72px}.hero-inner.hero-layout{min-height:690px;padding-top:28px;padding-bottom:48px}.hero-copy{max-width:100%}.hero-title{max-width:12ch;font-size:clamp(2.8rem,11.7vw,4rem)}.hero-art,.hero-footage:hover .hero-art{object-position:60% center;opacity:.6}.hero-footage::after{background:linear-gradient(90deg,rgba(251,250,246,.94),rgba(251,250,246,.70)),linear-gradient(180deg,#fbfaf6,transparent 25%,transparent 75%,#fbfaf6)}.hero-proof{margin-top:30px}.hero-sub{font-size:.98rem}}
+@media(max-width:940px){.hero{min-height:760px;padding:44px 0 80px}.hero-inner.hero-layout{min-height:630px}.hero-copy{max-width:680px}.hero-title{max-width:15ch}.hero-footage::after{background:linear-gradient(90deg,rgba(242,235,223,.94),rgba(242,235,223,.78) 44%,rgba(242,235,223,.25) 100%),linear-gradient(180deg,#f2ebdf 0%,transparent 25%,transparent 70%,#f2ebdf 100%)}}
+@media(max-width:600px){.hero{min-height:800px;padding:20px 0 72px}.hero-inner.hero-layout{min-height:690px;padding-top:28px;padding-bottom:48px}.hero-copy{max-width:100%}.hero-title{max-width:12ch;font-size:clamp(2.8rem,11.7vw,4rem)}.hero-art,.hero-footage:hover .hero-art{object-position:60% center;opacity:.85}.hero-footage::after{background:linear-gradient(90deg,rgba(242,235,223,.92),rgba(242,235,223,.64)),linear-gradient(180deg,#f2ebdf,transparent 25%,transparent 75%,#f2ebdf)}.hero-proof{margin-top:30px}.hero-sub{font-size:.98rem}}
 
+
+.hero-sub{color:#574b38}.hero-proof span{color:#64553f}
 </style>
 <link rel="canonical" href="https://investoexperts.com/">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
