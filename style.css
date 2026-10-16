@@ -6,7 +6,7 @@
   --charcoal:#17233b;--dark2:#202e50;
   --mid:#63738d;--lt:#8b9bb4;
   --border:rgba(121,100,223,0.18);--shadow:rgba(38,66,124,0.10);
-  --ff-head:'Cormorant',serif;--ff-body:'Jost',sans-serif;
+  --ff-head:'Jost',Arial,sans-serif;--ff-body:'Jost',sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
