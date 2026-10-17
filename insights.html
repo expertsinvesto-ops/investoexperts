@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Investment Insights &amp; Financial Planning Articles | Investo Experts</title>
-<meta name="description" content="Read Investo Experts' articles on market outlooks, SIP strategies, portfolio building and long-term financial planning.">
+<title>Investo Research Desk | Market Insights & Investor Education</title>
+<meta name="description" content="Explore market commentary, stock-analysis methodology, sector outlooks and the monthly Investo Research Desk Letter.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,16 +15,16 @@
 <link rel="apple-touch-icon" href="/favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Investo Experts">
-<meta property="og:title" content="Investment Insights &amp; Financial Planning Articles | Investo Experts">
-<meta property="og:description" content="Read Investo Experts' articles on market outlooks, SIP strategies, portfolio building and long-term financial planning.">
+<meta property="og:title" content="Investo Research Desk | Market Insights & Investor Education">
+<meta property="og:description" content="Explore market commentary, stock-analysis methodology, sector outlooks and the monthly Investo Research Desk Letter.">
 <meta property="og:url" content="https://investoexperts.com/insights.html">
 <meta property="og:image" content="https://investoexperts.com/images/investo-experts-logo.png">
 <meta property="og:image:alt" content="Investo Experts logo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Investment Insights &amp; Financial Planning Articles | Investo Experts">
-<meta name="twitter:description" content="Read Investo Experts' articles on market outlooks, SIP strategies, portfolio building and long-term financial planning.">
+<meta name="twitter:title" content="Investo Research Desk | Market Insights & Investor Education">
+<meta name="twitter:description" content="Explore market commentary, stock-analysis methodology, sector outlooks and the monthly Investo Research Desk Letter.">
 <meta name="twitter:image" content="https://investoexperts.com/images/investo-experts-logo.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://investoexperts.com/insights.html#page","url":"https://investoexperts.com/insights.html","name":"Investment Insights & Financial Planning Articles | Investo Experts","description":"Read Investo Experts' articles on market outlooks, SIP strategies, portfolio building and long-term financial planning.","isPartOf":{"@id":"https://investoexperts.com/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://investoexperts.com/"},{"@type":"ListItem","position":2,"name":"Investment Insights & Financial Planning Articles","item":"https://investoexperts.com/insights.html"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Investo Research Desk","url":"https://investoexperts.com/insights.html","description":"Market commentary, methodology, sector outlooks and monthly newsletters.","mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://investoexperts.com/post-stock-analysis-methodology.html","name":"Understand the business. Then look at the price."},{"@type":"ListItem","position":2,"url":"https://investoexperts.com/post-sector-outlook.html","name":"Banking, IT & pharma: a sector review framework"},{"@type":"ListItem","position":3,"url":"https://investoexperts.com/newsletter-october-2026.html","name":"The Research Desk Letter · October 2026"},{"@type":"ListItem","position":4,"url":"https://investoexperts.com/post-market-trends-geopolitics-2026.html","name":"Markets in 2026: AI growth meets energy risk"},{"@type":"ListItem","position":5,"url":"https://investoexperts.com/post-5cr-portfolio.html","name":"Planning a ₹5 crore portfolio: assumptions first"},{"@type":"ListItem","position":6,"url":"https://investoexperts.com/post-sip-strategy.html","name":"SIPs: build a habit, understand the risk"},{"@type":"ListItem","position":7,"url":"https://investoexperts.com/post-nifty-outlook.html","name":"Nifty outlook: June 2025 archive"}]}}</script>
 <style id="market-ticker-v2">
 .market-ticker{position:fixed;top:0;left:0;right:0;width:100%;height:46px;z-index:1001;overflow:hidden;box-sizing:border-box;border-bottom:2px solid #7964df;background:#fff}
 .market-ticker tv-ticker-tape{display:block;width:100%;height:44px}
@@ -34,6 +34,8 @@
 <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
 <link rel="stylesheet" href="responsive-parity.css?v=1">
 <link rel="stylesheet" href="site-theme.css?v=type-2">
+<link rel="stylesheet" href="research-desk.css?v=1">
+<script defer src="research-desk.js?v=1"></script>
 </head>
 <body>
 <div class="market-ticker" role="region" aria-label="Market quotes">
@@ -70,83 +72,19 @@
   <a href="contact.html" class="btn bc" style="margin-top:10px;justify-content:center">Book Free Consultation</a>
 </div>
 
-<div class="phero">
-  <div class="phero-orb"></div>
-  <div class="container">
-    <div class="phero-content">
-      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Insights</span></div>
-      <h1 class="display page-hero-title">Market <em style="color:var(--gold)">Insights</em></h1>
-      <p class="phero-sub">Research-backed analysis, investor education and market commentary from our team.</p>
-    </div>
-  </div>
-</div>
-<section>
-  <div class="container">
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px">
-      <button onclick="filterPosts('all',this)" class="btn btn-gold btn-sm filter-btn-active" style="border-radius:20px">All</button>
-      <button onclick="filterPosts('market',this)" class="btn btn-outline-dark btn-sm" style="border-radius:20px">Market Outlook</button>
-      <button onclick="filterPosts('wealth',this)" class="btn btn-outline-dark btn-sm" style="border-radius:20px">Wealth Building</button>
-      <button onclick="filterPosts('education',this)" class="btn btn-outline-dark btn-sm" style="border-radius:20px">Investor Education</button>
-      <button onclick="filterPosts('retirement',this)" class="btn btn-outline-dark btn-sm" style="border-radius:20px">Retirement</button>
-    </div>
-    <div class="igrid" id="postsGrid">
-      <div class="card ins-card reveal delay-1" data-cat="market">
-        <div class="ins-img"><img src="images/market-geopolitics-2026.png" alt="Cargo ships and an oil tanker at sunset beside a city port" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-        <div class="ins-body">
-          <div class="ins-meta"><span class="ins-cat">Market Outlook</span><span class="ins-date">15 October 2026</span></div>
-          <div class="ins-title">Markets in 2026: AI Growth Meets Geopolitical Energy Risk</div>
-          <p class="ins-exc">AI investment is supporting growth as geopolitical energy and shipping risks add uncertainty. A sourced outlook on what Indian investors can watch.</p>
-          <a href="post-market-trends-geopolitics-2026.html" class="ins-rd">Read Analysis &#8594;</a>
-        </div>
-      </div>
-      <div class="card ins-card reveal delay-1" data-cat="market">
-        <div class="ins-img" style="background:var(--cream2)"><div class="ins-ip"></div><div class="ins-ii">&#128202;</div></div>
-        <div class="ins-body">
-          <div class="ins-meta"><span class="ins-cat">Market Outlook</span><span class="ins-date">16 June 2025</span></div>
-          <div class="ins-title">Nifty Outlook: June 2025 Archive</div>
-          <p class="ins-exc">Historical commentary from June 2025. Prices, levels and market conditions are dated and should not be used as current trading guidance.</p>
-          <a href="post-nifty-outlook.html" class="ins-rd">Read Analysis &#8594;</a>
-        </div>
-      </div>
-      <div class="card ins-card reveal delay-2" data-cat="wealth">
-        <div class="ins-img" style="background:var(--cream3)"><div class="ins-ip"></div><div class="ins-ii">&#127942;</div></div>
-        <div class="ins-body">
-          <div class="ins-meta"><span class="ins-cat">Wealth Building</span><span class="ins-date">10 June 2025</span></div>
-          <div class="ins-title">How to Build a &#8377;5 Crore Portfolio from Scratch</div>
-          <p class="ins-exc">A practical, step-by-step framework for building a &#8377;5 crore corpus using disciplined equity investing and smart asset allocation.</p>
-          <a href="post-5cr-portfolio.html" class="ins-rd">Read Guide &#8594;</a>
-        </div>
-      </div>
-      <div class="card ins-card reveal delay-3" data-cat="education">
-        <div class="ins-img" style="background:var(--cream2)"><div class="ins-ip"></div><div class="ins-ii">&#128176;</div></div>
-        <div class="ins-body">
-          <div class="ins-meta"><span class="ins-cat">Investor Education</span><span class="ins-date">28 May 2025</span></div>
-          <div class="ins-title">SIP Strategy for Long-Term Wealth Creation</div>
-          <p class="ins-exc">How systematic investment plans, done right, create extraordinary wealth over 15&#8211;20 years through the powerful magic of compounding.</p>
-          <a href="post-sip-strategy.html" class="ins-rd">Read Guide &#8594;</a>
-        </div>
-      </div>
-      <div class="card ins-card reveal delay-1" data-cat="retirement">
-        <div class="ins-img" style="background:var(--cream2)"><div class="ins-ip"></div><div class="ins-ii">&#127968;</div></div>
-        <div class="ins-body">
-          <div class="ins-meta"><span class="ins-cat">Retirement Planning</span></div>
-          <div class="ins-title">Retirement Planning Tools</div>
-          <p class="ins-exc">Explore our retirement calculator and financial planning services to understand assumptions, timelines and potential savings needs.</p>
-          <a href="index.html#score-tool" class="ins-rd">Explore Free Calculators &#8594;</a>
-        </div>
-      </div>
-      </div>
-  </div>
-</section>
-
-<div class="cta-s" style="background:var(--cream2);border-top:1px solid var(--cream3);padding:72px 5%;text-align:center">
-  <div class="container">
-    <h2 class="hl" style="color:var(--charcoal);margin-bottom:12px">Get Market Insights on WhatsApp</h2>
-    <p style="max-width:460px;margin:0 auto 32px;color:var(--mid);font-size:.98rem;line-height:1.8">Join our free WhatsApp channel for weekly Nifty outlook, top stock ideas and market education.</p>
-    <a href="https://wa.me/918386002000" class="btn bg blg">&#128172; Join WhatsApp Channel</a>
-  </div>
-</div>
-
+<main class="rd" id="research-desk"><header class="rd-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Insights</span></div><div class="rd-hero-grid"><div><p class="rd-eyebrow">INVESTO RESEARCH DESK</p><h1>Perspective for<br><em>better decisions.</em></h1><p class="rd-lead">Markets move. Understanding stays with you. Explore market commentary, stock-analysis frameworks and sector perspectives, clearly explained.</p><div class="rd-hero-actions"><a href="#research-library" class="btn bc">Explore the desk <span aria-hidden="true">↓</span></a><a href="#newsletter-archive" class="rd-text-link">The monthly letter ↗</a></div><p class="rd-hero-note">Investor education · Named editorial team · Referenced sources</p></div><aside class="rd-cover"><div class="rd-cover-top"><span>THE DESK LETTER</span><span>ISSUE 01</span></div><span class="rd-cover-orbit" aria-hidden="true">↗</span><p>October 2026</p><h2>See the bigger<br>investment picture.</h2><p>Business quality. Sector exposure.<br>A simpler review checklist.</p><a href="newsletter-october-2026.html">Open this month’s edition <span aria-hidden="true">↗</span></a></aside></div></div></header>
+<div class="rd-topics container" aria-label="Research topics"><a href="#research-library" data-rd-topic="market"><span>01</span>Market commentary ↗</a><a href="#research-library" data-rd-topic="methodology"><span>02</span>Stock methodology ↗</a><a href="#research-library" data-rd-topic="sectors"><span>03</span>Sector outlooks ↗</a><a href="#newsletter-archive"><span>04</span>Monthly newsletters ↗</a></div>
+<section class="rd-feature container" aria-labelledby="rd-feature-title"><div class="rd-section-heading"><div><p class="rd-eyebrow">START WITH THE PROCESS</p><h2 id="rd-feature-title">More context. Less noise.</h2></div><p>Understand how to read a business before deciding what its share price means.</p></div><a class="rd-feature-card" href="post-stock-analysis-methodology.html"><div><span class="rd-art rd-art-method" aria-hidden="true"><svg viewBox="0 0 400 180" fill="none"><path class="rd-grid-line" d="M0 45H400M0 90H400M0 135H400M80 0V180M160 0V180M240 0V180M320 0V180"/><path class="rd-chart-fill" d="M0 158L40 140L80 150L120 95L160 115L200 70L240 90L280 42L320 58L360 20L400 40V180H0Z"/><path class="rd-chart" d="M0 158L40 140L80 150L120 95L160 115L200 70L240 90L280 42L320 58L360 20L400 40"/></svg><span>01 / THE FRAMEWORK</span></span></div><div><span class="rd-tag">Stock-analysis methodology</span><h3>Understand the business. Then look at the price.</h3><p>A practical framework for reading financial statements, testing valuation assumptions and documenting what could go wrong.</p><div class="rd-byline"><span>Investo Experts Editorial Desk</span><time datetime="2026-10-17">17 October 2026</time></div><span class="rd-text-link">Explore the framework ↗</span></div></a></section>
+<section class="rd-library container" id="research-library" aria-labelledby="rd-library-title"><div class="rd-section-heading"><div><p class="rd-eyebrow">THE READING ROOM</p><h2 id="rd-library-title">Explore our insights</h2></div><label class="rd-search"><span class="rd-sr">Search research articles</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><input type="search" id="rd-search" placeholder="Search a topic or article…" maxlength="120"></label></div><div class="rd-filters" role="group" aria-label="Filter articles by topic"><button type="button" data-rd-filter="all" aria-pressed="true">All insights</button><button type="button" data-rd-filter="market" aria-pressed="false">Market commentary</button><button type="button" data-rd-filter="methodology" aria-pressed="false">Methodology</button><button type="button" data-rd-filter="sectors" aria-pressed="false">Sector outlooks</button><button type="button" data-rd-filter="newsletters" aria-pressed="false">Newsletters</button><button type="button" data-rd-filter="education" aria-pressed="false">Investor education</button></div><p class="rd-result-count" id="rd-result-count" role="status" aria-live="polite">7 articles · newest first</p><div class="rd-card-grid"><article class="rd-card" data-rd-category="methodology" data-rd-search="Understand the business. Then look at the price. A practical framework for reading financial statements, testing valuation assumptions and documenting what could go wrong. Stock-analysis methodology"><span class="rd-art rd-art-method" aria-hidden="true"><svg viewBox="0 0 400 180" fill="none"><path class="rd-grid-line" d="M0 45H400M0 90H400M0 135H400M80 0V180M160 0V180M240 0V180M320 0V180"/><path class="rd-chart-fill" d="M0 158L40 140L80 150L120 95L160 115L200 70L240 90L280 42L320 58L360 20L400 40V180H0Z"/><path class="rd-chart" d="M0 158L40 140L80 150L120 95L160 115L200 70L240 90L280 42L320 58L360 20L400 40"/></svg><span>01 / THE FRAMEWORK</span></span><div class="rd-card-body"><div class="rd-meta"><span>Stock-analysis methodology</span><span>5 min read</span></div><h3><a href="post-stock-analysis-methodology.html">Understand the business. Then look at the price.</a></h3><p>A practical framework for reading financial statements, testing valuation assumptions and documenting what could go wrong.</p><div class="rd-byline"><span>Investo Experts Editorial Desk</span><time datetime="2026-10-17">17 October 2026</time></div><a class="rd-text-link" href="post-stock-analysis-methodology.html">Read article <span aria-hidden="true">↗</span><span class="rd-sr">: Understand the business. Then look at the price.</span></a></div></article>
+<article class="rd-card" data-rd-category="sectors" data-rd-search="Banking, IT &amp; pharma: a sector review framework Three sectors, different business drivers. Learn which questions to ask before interpreting sector performance. Sector outlooks"><span class="rd-art rd-art-sectors" aria-hidden="true"><svg viewBox="0 0 400 180" fill="none"><path class="rd-grid-line" d="M0 45H400M0 90H400M0 135H400M80 0V180M160 0V180M240 0V180M320 0V180"/><path class="rd-chart-fill" d="M0 158L40 140L80 150L120 95L160 115L200 70L240 90L280 42L320 58L360 20L400 40V180H0Z"/><path class="rd-chart" d="M0 158L40 140L80 150L120 95L160 115L200 70L240 90L280 42L320 58L360 20L400 40"/></svg><span>02 / SECTOR LENS</span></span><div class="rd-card-body"><div class="rd-meta"><span>Sector outlooks</span><span>4 min read</span></div><h3><a href="post-sector-outlook.html">Banking, IT &amp; pharma: a sector review framework</a></h3><p>Three sectors, different business drivers. Learn which questions to ask before interpreting sector performance.</p><div class="rd-byline"><span>Investo Experts Editorial Desk</span><time datetime="2026-10-17">17 October 2026</time></div><a class="rd-text-link" href="post-sector-outlook.html">Read article <span aria-hidden="true">↗</span><span class="rd-sr">: Banking, IT &amp; pharma: a sector review framework</span></a></div></article>
+<article class="rd-card" data-rd-category="newsletters" data-rd-search="The Research Desk Letter · October 2026 Issue 01: business quality, sector exposure and a simple portfolio review checklist. A reading edition for thoughtful investors. Monthly newsletters"><span class="rd-art rd-art-letter" aria-hidden="true"><svg viewBox="0 0 400 180" fill="none"><path class="rd-grid-line" d="M0 45H400M0 90H400M0 135H400M80 0V180M160 0V180M240 0V180M320 0V180"/><path class="rd-chart-fill" d="M0 158L40 140L80 150L120 95L160 115L200 70L240 90L280 42L320 58L360 20L400 40V180H0Z"/><path class="rd-chart" d="M0 158L40 140L80 150L120 95L160 115L200 70L240 90L280 42L320 58L360 20L400 40"/></svg><span>THE DESK LETTER</span></span><div class="rd-card-body"><div class="rd-meta"><span>Monthly newsletters</span><span>4 min read</span></div><h3><a href="newsletter-october-2026.html">The Research Desk Letter · October 2026</a></h3><p>Issue 01: business quality, sector exposure and a simple portfolio review checklist. A reading edition for thoughtful investors.</p><div class="rd-byline"><span>Investo Experts Editorial Desk</span><time datetime="2026-10-17">17 October 2026</time></div><a class="rd-text-link" href="newsletter-october-2026.html">Read this edition <span aria-hidden="true">↗</span><span class="rd-sr">: The Research Desk Letter · October 2026</span></a></div></article>
+<article class="rd-card" data-rd-category="market" data-rd-search="Markets in 2026: AI growth meets energy risk A dated market note exploring technology investment, energy costs and geopolitical uncertainty. Market commentary"><span class="rd-art rd-art-market" aria-hidden="true"><svg viewBox="0 0 400 180" fill="none"><path class="rd-grid-line" d="M0 45H400M0 90H400M0 135H400M80 0V180M160 0V180M240 0V180M320 0V180"/><path class="rd-chart-fill" d="M0 158L40 140L80 150L120 95L160 115L200 70L240 90L280 42L320 58L360 20L400 40V180H0Z"/><path class="rd-chart" d="M0 158L40 140L80 150L120 95L160 115L200 70L240 90L280 42L320 58L360 20L400 40"/></svg><span>MARKET PERSPECTIVES</span></span><div class="rd-card-body"><div class="rd-meta"><span>Market commentary</span><span>7 min read</span></div><h3><a href="post-market-trends-geopolitics-2026.html">Markets in 2026: AI growth meets energy risk</a></h3><p>A dated market note exploring technology investment, energy costs and geopolitical uncertainty.</p><div class="rd-byline"><span>Investo Experts Editorial Desk</span><time datetime="2026-10-15">15 October 2026</time></div><a class="rd-text-link" href="post-market-trends-geopolitics-2026.html">Read article <span aria-hidden="true">↗</span><span class="rd-sr">: Markets in 2026: AI growth meets energy risk</span></a></div></article>
+<article class="rd-card" data-rd-category="market" data-rd-search="Nifty outlook: June 2025 archive Historical commentary retained for reference. The levels and market observations are not current trading guidance. Market commentary"><span class="rd-art rd-art-archive" aria-hidden="true"><svg viewBox="0 0 400 180" fill="none"><path class="rd-grid-line" d="M0 45H400M0 90H400M0 135H400M80 0V180M160 0V180M240 0V180M320 0V180"/><path class="rd-chart-fill" d="M0 158L40 140L80 150L120 95L160 115L200 70L240 90L280 42L320 58L360 20L400 40V180H0Z"/><path class="rd-chart" d="M0 158L40 140L80 150L120 95L160 115L200 70L240 90L280 42L320 58L360 20L400 40"/></svg><span>FROM THE ARCHIVE</span></span><div class="rd-card-body"><div class="rd-meta"><span>Market commentary</span><span>5 min read</span></div><h3><a href="post-nifty-outlook.html">Nifty outlook: June 2025 archive</a></h3><p>Historical commentary retained for reference. The levels and market observations are not current trading guidance.</p><div class="rd-byline"><span>Investo Experts Editorial Desk</span><time datetime="2025-06-16">16 June 2025</time><b>Archive</b></div><a class="rd-text-link" href="post-nifty-outlook.html">Read article <span aria-hidden="true">↗</span><span class="rd-sr">: Nifty outlook: June 2025 archive</span></a></div></article>
+<article class="rd-card" data-rd-category="education" data-rd-search="Planning a ₹5 crore portfolio: assumptions first Understand timelines, contributions and illustrative compounding without treating a target as a promised outcome. Investor education"><span class="rd-art rd-art-goal" aria-hidden="true"><svg viewBox="0 0 400 180" fill="none"><path class="rd-grid-line" d="M0 45H400M0 90H400M0 135H400M80 0V180M160 0V180M240 0V180M320 0V180"/><path class="rd-chart-fill" d="M0 158L40 140L80 150L120 95L160 115L200 70L240 90L280 42L320 58L360 20L400 40V180H0Z"/><path class="rd-chart" d="M0 158L40 140L80 150L120 95L160 115L200 70L240 90L280 42L320 58L360 20L400 40"/></svg><span>THE LONG VIEW</span></span><div class="rd-card-body"><div class="rd-meta"><span>Investor education</span><span>4 min read</span></div><h3><a href="post-5cr-portfolio.html">Planning a ₹5 crore portfolio: assumptions first</a></h3><p>Understand timelines, contributions and illustrative compounding without treating a target as a promised outcome.</p><div class="rd-byline"><span>Investo Experts Editorial Desk</span><time datetime="2025-06-10">10 June 2025</time></div><a class="rd-text-link" href="post-5cr-portfolio.html">Read article <span aria-hidden="true">↗</span><span class="rd-sr">: Planning a ₹5 crore portfolio: assumptions first</span></a></div></article>
+<article class="rd-card" data-rd-category="education" data-rd-search="SIPs: build a habit, understand the risk A clear explanation of regular investing, cost averaging and the questions to ask when your circumstances change. Investor education"><span class="rd-art rd-art-sip" aria-hidden="true"><svg viewBox="0 0 400 180" fill="none"><path class="rd-grid-line" d="M0 45H400M0 90H400M0 135H400M80 0V180M160 0V180M240 0V180M320 0V180"/><path class="rd-chart-fill" d="M0 158L40 140L80 150L120 95L160 115L200 70L240 90L280 42L320 58L360 20L400 40V180H0Z"/><path class="rd-chart" d="M0 158L40 140L80 150L120 95L160 115L200 70L240 90L280 42L320 58L360 20L400 40"/></svg><span>INVESTOR ESSENTIALS</span></span><div class="rd-card-body"><div class="rd-meta"><span>Investor education</span><span>3 min read</span></div><h3><a href="post-sip-strategy.html">SIPs: build a habit, understand the risk</a></h3><p>A clear explanation of regular investing, cost averaging and the questions to ask when your circumstances change.</p><div class="rd-byline"><span>Investo Experts Editorial Desk</span><time datetime="2025-05-28">28 May 2025</time></div><a class="rd-text-link" href="post-sip-strategy.html">Read article <span aria-hidden="true">↗</span><span class="rd-sr">: SIPs: build a habit, understand the risk</span></a></div></article></div><div class="rd-empty" id="rd-empty" hidden><h3>No articles match your search</h3><p>Try another topic or show the full library.</p><button type="button" class="btn bc" id="rd-reset">Show all insights</button></div></section>
+<section class="rd-newsletter container" id="newsletter-archive" aria-labelledby="rd-letter-title"><div><p class="rd-eyebrow">A LITTLE TIME. A WIDER VIEW.</p><h2 id="rd-letter-title">The Research Desk Letter</h2><p>A monthly reading series bringing our educational articles and review questions into one place. Read each published edition here.</p><a href="https://wa.me/918386002000?text=Hello%20Investo%20Experts%2C%20I%20would%20like%20to%20ask%20about%20Research%20Desk%20updates." class="rd-text-link">Ask about updates on WhatsApp ↗</a><small>Opens a chat with our team. No automatic subscription.</small></div><a class="rd-issue" href="newsletter-october-2026.html"><span>ISSUE 01 <span aria-hidden="true">↗</span></span><h3>October 2026</h3><p>Business quality, sector exposure<br>and your review checklist.</p><time datetime="2026-10-17">Published 17 October 2026</time></a></section>
+<section class="rd-standards container" aria-labelledby="rd-standards-title"><div><p class="rd-eyebrow">READ WITH CONFIDENCE</p><h2 id="rd-standards-title">The context behind every article</h2></div><div><h3>Who wrote it</h3><p>Each article identifies its author or editorial team. Organisational authorship is not an individual analyst credential.</p></div><div><h3>When it was written</h3><p>Publication dates remain visible. Older market notes are marked as archives; updates are dated separately.</p></div><div><h3>Where it comes from</h3><p>Source references and relevant risk notes accompany the reading. Facts, assumptions and opinion should be read in context.</p></div></section>
+<aside class="rd-disclaimer container"><strong>Important reading note</strong><p>Research Desk is the name of our educational content section. It does not imply SEBI registration as a research analyst or investment adviser. Content is general information, not personalised investment advice or a buy/sell recommendation. Investments carry risk, including loss of capital. Past performance and illustrations do not guarantee future results. Investo Experts operates as a mutual fund distributor and Motilal Oswal Authorised Person; see the service-role disclosure below.</p></aside></main>
 <aside id="service-role" aria-label="Service role and regulatory information" style="padding:24px 5%;background:var(--cream2);border-top:1px solid var(--border);font-size:.86rem;line-height:1.8;color:var(--charcoal)"><strong>Service role and regulatory information</strong><p>Investo Experts describes its business as a Motilal Oswal franchise partner and a mutual fund distribution business. These roles must not be read as a claim that Investo Experts independently holds SEBI registration as an investment adviser, stock broker or portfolio manager.</p><p>Legal name: Investo Experts. EUIN: E384337. Motilal Oswal Authorised Person (AP) number: AP0297145661. These identifiers have been supplied by the business. AMFI Registration Number: ARN-191362 (supplied by the business). EUIN is an individual identifier and is not an ARN or independent SEBI investment-adviser or portfolio-manager registration. Verify the applicable registrations and service agreement before transacting. A partner's registration does not constitute registration of Investo Experts.</p><p>PMS content is general information, not an offer of an independently operated Investo Experts PMS. PMS provider identified by the business: Motilal Oswal Asset Management Company Limited, SEBI portfolio-manager registration INP000000670, as published on its official website. Portfolio management is provided by that entity, not independently by Investo Experts. Before any introduction, confirm Investo Experts' documented distribution/referral role, applicable compensation, conflicts and the provider's service terms. <a href="https://www.motilaloswalamc.com/pms" style="text-decoration:underline">Provider registration and PMS information</a>.</p></aside><div class="business-metrics" aria-label="Business figures" style="display:flex;gap:24px;flex-wrap:wrap;padding:22px 5%;background:var(--cream2);color:var(--charcoal)"><div><strong style="display:block;font-size:1.35rem">2,100</strong><span>Clients</span></div><div><strong style="display:block;font-size:1.35rem">₹270+ crore</strong><span>Assets under management (AUM)</span></div><div><strong style="display:block;font-size:1.35rem">12+ years</strong><span>Experience</span></div></div><footer>
   <div class="fgrid">
     <div>
@@ -352,36 +290,8 @@
   });
 })();
 
-// FILTER POSTS
-function filterPosts(cat,btn){
-  document.querySelectorAll('.ins-card').forEach(function(c){
-    c.style.display=(cat==='all'||c.dataset.cat===cat)?'':'none';
-  });
-  document.querySelectorAll('[onclick^="filterPosts"]').forEach(function(b){
-    b.className='btn bod bsm';b.style.borderRadius='20px';
-  });
-  btn.className='btn bg bsm';btn.style.borderRadius='20px';
-}
 </script>
 
-<script>
-function filterPosts(cat, btn) {
-  document.querySelectorAll('.ins-card').forEach(function(card) {
-    if (cat === 'all' || card.dataset.cat === cat) {
-      card.style.display = '';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-  document.querySelectorAll('[onclick^="filterPosts"]').forEach(function(b) {
-    b.classList.remove('filter-btn-active');
-    b.style.background = '';
-    b.style.color = '';
-  });
-  btn.classList.add('filter-btn-active');
-  btn.style.background = 'var(--gold)';
-  btn.style.color = 'var(--charcoal)';
-}
-</script>
+
 </body>
 </html>
