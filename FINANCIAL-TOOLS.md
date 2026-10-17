@@ -1,12 +1,12 @@
 # Financial Planning Tools 2.0
 
-Static, dependency-free upgrades to the existing homepage section. No deployment has been performed for this change.
+Static, dependency-free calculators, now hosted in the dedicated `tools.html` workspace. See `TOOLS-CENTRE.md` for the move from the homepage and the direct PDF exporter.
 
 ## Files and architecture
 
-- `index.html`: existing tools section and script includes. Legacy calculator listeners are removed so a form has only one calculation path. Existing anchors `#financial-tools`, `#score-tool` and the four tab/panel IDs remain.
+- `tools.html`: calculator forms, the tool index and existing model integration. `index.html` now contains a compact workspace link; its `#financial-tools` and `#score-tool` anchors remain. The calculator panel IDs remain on the dedicated page.
 - `financial-tools.css`: existing theme plus scoped `.ft-v2` controls, charts, result cards and report-print styles.
-- `financial-tools.js`: accessible tabs, linked sliders, validation, local model rendering, SVG charts, annual tables and print reports.
+- `financial-tools.js`: accessible tabs, linked sliders, validation, local model rendering, SVG charts, annual tables and direct PDF export.
 - `wealth-calculations.js`: deterministic UMD model module, usable directly in browsers and Node tests. No DOM, storage or network.
 - `tests/wealth-calculations.test.cjs`: independent formula and boundary checks.
 
@@ -65,7 +65,7 @@ Each component scales linearly, clipped to 0..its weight. Sum and round to 0..10
 - Annual returns: 0–30%; SIP step-up: 0–25%; inflation/withdrawal increases: 0–15%; illustrative effective goal tax: 0–60%. Money and durations have explicit caps. Projections beyond ₹10^15 trigger an error rather than displaying invalid numbers.
 - An invalid scenario hides stale results and disables printing. No `NaN` or `Infinity` is rendered.
 - No financial inputs, score, report or scenario are saved to browser storage or transmitted to a server, analytics API, WhatsApp or lead form by these tools. Existing unrelated website forms remain unchanged. The consultation link is simply `contact.html`, without financial query parameters.
-- No signup or contact details are required. Printing creates a temporary local report in the page and invokes the browser print dialog; users select Print or Save as PDF.
+- No signup or contact details are required. The single Download PDF action generates a local PDF Blob and initiates a browser download. No print dialog is opened.
 
 ## Verification performed
 
