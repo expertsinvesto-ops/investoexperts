@@ -1,0 +1,67 @@
+/* Cinematic Core Services. Everything is scoped to this one homepage section. */
+#services.cinematic-services{position:relative;isolation:isolate;overflow:hidden;padding:70px 0 75px;background:#f7f9ff;color:#17233b;scroll-margin-top:125px}
+#services .cs-container{position:relative;z-index:1;max-width:1400px}
+#services .cs-light-field{position:absolute;inset:0 0 auto;height:700px;pointer-events:none;overflow:hidden;background:radial-gradient(ellipse at 80% 22%,#dfe8ff8c,transparent 48%),radial-gradient(ellipse at 0 4%,#f2edff,transparent 40%)}
+#services .cs-light-field:after{content:'';position:absolute;inset:0;background-image:linear-gradient(#849cc00b 1px,transparent 1px),linear-gradient(90deg,#849cc00b 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(transparent,#0005 40%,transparent)}
+#services .cs-light-field>svg{width:100%;height:100%;opacity:.7}.cs-ribbon{animation:cs-ribbon-flow 17s ease-in-out infinite;animation-play-state:paused}
+#services.cs-visible .cs-ribbon{animation-play-state:running}
+#services .cs-intro{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.85fr);gap:30px;align-items:center;margin:0 0 45px;min-height:350px}
+#services .cs-eyebrow{font:600 .7rem/1.5 var(--ff-body);letter-spacing:.19em;color:#6474b9;margin:0 0 23px}
+#services .cs-intro h2{font:600 clamp(2.2rem,4vw,3.65rem)/1.08 var(--ff-body);letter-spacing:-.045em;color:#17233b;margin:0 0 23px;max-width:700px}
+#services .cs-intro h2 em{font-style:normal;color:#4c67d4}
+#services .cs-intro-description{font:400 1.02rem/1.85 var(--ff-body);max-width:525px;color:#5c708f;margin:0}
+#services .cs-intro-rule{display:block;width:73px;height:2px;background:linear-gradient(90deg,#3f69de,#a494df);margin:28px 0 0}
+#services .cs-sculpture-wrap{position:relative;min-width:0;text-align:center}
+#services .cs-sculpture{display:block;width:100%;max-width:470px;height:auto;margin:auto}
+#services .cs-sculpture-caption{display:block;font:400 .65rem/1.7 var(--ff-body);color:#7787a4;letter-spacing:.015em;margin-top:-10px}
+#services .cs-orbit-body{transform-box:fill-box;transform-origin:center;animation:cs-orbit-float 10s ease-in-out infinite;animation-play-state:paused}
+#services .cs-motion .cs-orbit-body{animation-play-state:running}
+#services .cs-bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:22px;align-items:stretch}
+#services .cs-card{--cs-rx:0deg;--cs-ry:0deg;--cs-px:50%;--cs-py:50%;position:relative;isolation:isolate;min-width:0;border:1px solid #dce5f6;border-radius:21px;background:#fff;display:flex;flex-direction:column;padding:24px 28px 22px;box-shadow:0 5px 18px #213e6806;transition:transform .35s cubic-bezier(.2,.7,.3,1),box-shadow .35s,border-color .35s;transform:perspective(1200px) rotateX(var(--cs-rx)) rotateY(var(--cs-ry));overflow:hidden}
+#services .cs-card:before{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 380px 260px at var(--cs-px) var(--cs-py),#a5baff2b,transparent 70%);opacity:0;transition:opacity .35s}
+#services .cs-card>*{position:relative;z-index:1}
+#services .cs-card-featured{grid-column:span 7;grid-row:span 2;background:radial-gradient(ellipse at 96% 10%,#34457945,transparent 60%),linear-gradient(140deg,#14243e,#1a2e50);border-color:#2b4167;padding:29px 35px 30px;box-shadow:0 18px 45px #25395f17}
+#services .cs-card-featured:before{background:radial-gradient(ellipse 480px 350px at var(--cs-px) var(--cs-py),#7c9ee62e,transparent 70%)}
+#services .cs-card-stock,#services .cs-card-planning{grid-column:span 5}
+#services .cs-card-wealth,#services .cs-card-funds,#services .cs-card-bonds{grid-column:span 4}
+#services .cs-card-topline{display:flex;justify-content:space-between;gap:20px;font:500 .62rem/1.5 var(--ff-body);letter-spacing:.12em;color:#7788a7;margin-bottom:13px}
+#services .cs-card-topline>span:last-child{color:#a2b1cc;letter-spacing:.04em}
+#services .cs-card-featured .cs-card-topline{color:#acc0e5;margin-bottom:23px}
+#services .cs-card-featured .cs-card-topline>span:last-child{color:#8098bd}
+#services .cs-graphic{position:relative;width:100%;min-width:0;display:flex;align-items:center;justify-content:center;border-radius:14px;background:linear-gradient(135deg,#f6f9ff,#f4f3fc);height:158px;margin-bottom:22px;overflow:hidden}
+#services .cs-visual-svg{display:block;width:100%;height:100%;max-width:480px;transition:transform .5s cubic-bezier(.2,.7,.3,1)}
+#services .cs-chart-grid{stroke:#a4b8df;stroke-opacity:.16;stroke-width:1}
+#services .cs-card-featured .cs-graphic{height:auto;min-height:290px;flex:1;max-height:390px;background:radial-gradient(ellipse at 50% 70%,#314a7e3b,transparent 72%);margin:0 -8px 27px;width:calc(100% + 16px);border:1px solid #c9dcff0a}
+#services .cs-card-featured .cs-visual-svg{max-width:660px;height:auto;min-height:270px}
+#services .cs-illustration-note{position:absolute;left:13px;bottom:9px;right:10px;font:400 .57rem/1.55 var(--ff-body);color:#7e8fab;letter-spacing:.01em}
+#services .cs-card-featured .cs-illustration-note{color:#a0b1cf}
+#services .cs-card-copy{display:flex;flex-direction:column;flex:1;min-height:0}
+#services .cs-card h3{font:600 clamp(1.3rem,1.6vw,1.65rem)/1.2 var(--ff-body);letter-spacing:-.025em;color:#23395d;margin:0 0 13px}
+#services .cs-card-featured h3{color:#f5f8ff;font-size:clamp(2.1rem,3vw,2.85rem);line-height:1.12;letter-spacing:-.04em;margin-bottom:19px;max-width:430px}
+#services .cs-card p{font:400 .9rem/1.8 var(--ff-body);color:#627493;margin:0 0 20px;max-width:570px}
+#services .cs-card-featured p{color:#b5c4dc;font-size:1rem;line-height:1.85;max-width:500px;margin-bottom:30px}
+#services .cs-card-featured .cs-card-copy{flex:0 0 auto;min-height:auto;width:100%}
+#services .cs-link{display:flex;align-items:center;justify-content:space-between;gap:15px;min-height:47px;font:500 .78rem/1.5 var(--ff-body);color:#4766bd;text-decoration:none;margin-top:auto;padding:12px 0 0;border-top:1px solid #e3e9f5;letter-spacing:.005em}
+#services .cs-link .cs-arrow{font-size:1.1rem;display:grid;place-items:center;flex-shrink:0;width:31px;height:31px;border-radius:50%;background:#f0f4ff;color:#5674d2;transition:transform .3s,background .3s}
+#services .cs-card-featured .cs-link{color:#e2ebff;border-top-color:#b7c9f230;font-size:.87rem}
+#services .cs-card-featured .cs-arrow{background:#91a9db1c;color:#d7e4ff;border:1px solid #8ba6da45;width:37px;height:37px}
+#services .cs-link:focus-visible{outline:3px solid #aaa2e9;outline-offset:6px;border-radius:3px}
+#services .cs-section-note{text-align:center;font:400 .76rem/1.85 var(--ff-body);color:#7486a3;margin:30px auto 0;max-width:650px}
+#services .cs-entered{animation:cs-entrance .8s cubic-bezier(.18,.7,.25,1) var(--cs-delay,0ms) backwards}
+#services .cs-card.cs-entered .cs-draw{animation:cs-line-reveal 1.6s cubic-bezier(.2,.6,.25,1) calc(var(--cs-delay,0ms) + .12s) backwards;stroke-dasharray:1;stroke-dashoffset:0}
+#services .cs-card.cs-entered .cs-ring-reveal{animation:cs-ring-arrive 1.2s ease-out calc(var(--cs-delay,0ms) + .1s) backwards;transform-box:fill-box;transform-origin:center}
+#services .cs-card-featured.cs-motion .cs-visual-drift{animation:cs-node-drift 8s ease-in-out infinite}
+@media(hover:hover) and (pointer:fine){#services .cs-card:hover{transform:perspective(1200px) translateY(-5px) rotateX(var(--cs-rx)) rotateY(var(--cs-ry));border-color:#bdcdf1;box-shadow:0 17px 34px #2e4b8012}#services .cs-card-featured:hover{border-color:#6989bd;box-shadow:0 23px 46px #203b6524}#services .cs-card:hover:before{opacity:1}#services .cs-card:hover .cs-visual-svg{transform:translateY(-3px) scale(1.012)}#services .cs-link:hover .cs-arrow{transform:translate(2px,-2px);background:#e5edff}#services .cs-card-featured .cs-link:hover .cs-arrow{background:#7b99d43b}}
+@keyframes cs-entrance{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes cs-line-reveal{from{stroke-dashoffset:1;opacity:.3}to{stroke-dashoffset:0;opacity:1}}
+@keyframes cs-ring-arrive{from{opacity:.35;scale:.95}to{opacity:1;scale:1}}
+@keyframes cs-orbit-float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-7px) rotate(1deg)}}
+@keyframes cs-ribbon-flow{0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-9px)}}
+@keyframes cs-node-drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@media(max-width:1100px){#services .cs-intro{gap:14px}#services .cs-card{padding:22px}#services .cs-card-featured{padding:26px}#services .cs-card-featured p{font-size:.95rem}#services .cs-card p{font-size:.86rem}#services .cs-graphic{height:150px}#services .cs-intro h2{font-size:clamp(2.4rem,4.5vw,3.5rem)}}
+@media(max-width:900px){#services .cs-bento{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}#services .cs-card-featured{grid-column:1/-1;grid-row:auto;display:grid;grid-template-columns:1fr 1fr;gap:0 28px;align-items:center;padding:27px}#services .cs-card-featured .cs-card-topline{grid-column:1/-1;margin-bottom:18px}#services .cs-card-featured .cs-graphic{min-height:260px;max-height:none;margin:0;width:100%}#services .cs-card-featured .cs-card-copy{min-width:0}#services .cs-card-featured h3{font-size:2.1rem}#services .cs-card-featured p{font-size:.9rem;margin-bottom:18px}#services .cs-card-stock,#services .cs-card-planning,#services .cs-card-wealth,#services .cs-card-funds{grid-column:auto}#services .cs-card-bonds{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:0 25px;align-items:center}#services .cs-card-bonds .cs-card-topline{grid-column:1/-1}#services .cs-card-bonds .cs-graphic{margin:0;min-height:215px}#services .cs-intro{min-height:290px;margin-bottom:35px}#services .cs-intro h2{font-size:2.65rem}#services .cs-intro-description{font-size:.94rem}#services .cs-sculpture-caption{font-size:.6rem}#services .cs-graphic{height:175px}#services .cs-card h3{font-size:1.55rem}#services .cs-card p{font-size:.92rem}#services .cs-link{font-size:.8rem}}
+@media(max-width:650px){#services.cinematic-services{padding:48px 0 50px}#services .cs-intro{grid-template-columns:1fr;gap:9px;margin-bottom:28px;min-height:0}#services .cs-eyebrow{font-size:.66rem;margin-bottom:20px}#services .cs-intro h2{font-size:clamp(2.2rem,7.6vw,3.15rem);margin-bottom:20px}#services .cs-intro-description{font-size:.98rem;line-height:1.85;max-width:520px}#services .cs-intro-rule{margin-top:23px}#services .cs-sculpture-wrap{max-width:320px;width:100%;margin:0 auto}#services .cs-sculpture-caption{font-size:.59rem;margin-top:-20px}#services .cs-bento{grid-template-columns:minmax(0,1fr);gap:19px}#services .cs-card,#services .cs-card-featured,#services .cs-card-bonds{display:flex;grid-column:auto;grid-row:auto;padding:23px;gap:0}#services .cs-card-topline,#services .cs-card-featured .cs-card-topline{margin-bottom:16px}#services .cs-card-featured .cs-graphic{height:235px;min-height:235px;margin:0 0 24px;width:100%}#services .cs-card-featured .cs-visual-svg{min-height:0}#services .cs-card-featured h3{font-size:2.2rem}#services .cs-card-featured p{font-size:.97rem;line-height:1.85;margin-bottom:25px}#services .cs-card h3{font-size:1.65rem}#services .cs-card p{font-size:.96rem;line-height:1.85}#services .cs-graphic,#services .cs-card-bonds .cs-graphic{height:185px;min-height:0;margin-bottom:23px}#services .cs-link{min-height:49px;font-size:.83rem}#services .cs-illustration-note{font-size:.56rem}#services .cs-section-note{font-size:.75rem;margin-top:25px;text-align:left}#services .cs-ribbon,#services .cs-orbit-body,#services .cs-visual-drift{animation:none!important}#services .cs-card-featured h3{font-size:2.15rem}}
+@media(max-width:650px){#services .cs-card-featured .cs-graphic{flex:0 0 235px}#services .cs-card-featured{align-items:stretch}}
+@media(max-width:360px){#services .cs-card,#services .cs-card-featured{padding:20px}#services .cs-intro h2{font-size:2.15rem}#services .cs-card h3{font-size:1.5rem}#services .cs-card-featured h3{font-size:1.95rem}#services .cs-link{font-size:.77rem}#services .cs-graphic{height:165px}}
+@media(prefers-reduced-motion:reduce){#services *,#services *:before,#services *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}#services .cs-card,#services .cs-card:hover,#services .cs-visual-svg,#services .cs-card:hover .cs-visual-svg{transform:none!important}}
+#services.cs-static *,#services.cs-static *:before{animation:none!important;transition:none!important}#services.cs-static .cs-card,#services.cs-static .cs-card:hover,#services.cs-static .cs-visual-svg{transform:none!important}
