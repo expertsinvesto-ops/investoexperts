@@ -29,3 +29,6 @@ In the authenticated Calendly event settings, the immediate calendar invitation 
 `book-consultation.html`, `booking.css`, `booking.js`, `booking-config.js`. Existing booking-labelled links lead to the new page; ordinary Contact links are unchanged. The provider owns calendar conflict checking, persistence, notifications, cancellations and rescheduling. This page never sends emails or stores appointments in browser storage. Public hosted event URLs are safe to commit; API keys are not.
 
 Provider references: https://cal.com/features/embed and https://cal.com/features/workflows. Enable and verify all required workflows in the chosen account before describing them as active.
+
+
+Update: the business explicitly requested the same email for Ajay. Both advisor cards now use the existing shared 30-minute event and account (expertsinvesto@gmail.com). Advisor choice is pre-filled into the first custom question via Calendly a1. The hosted page identifies the account owner as Abhishek; this is a shared calendar, not separate advisor availability. The website explains this. Booking notes are editable by the attendee.
