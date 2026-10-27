@@ -1,6 +1,8 @@
 # Appointment booking activation
 
-Status: prepared locally; not deployed or connected to live calendars. No available slots or successful bookings are simulated. Existing general contact and private enquiry forms are preserved.
+Status (27 October 2026): booking page deployed. Abhishek Mahala’s active 30-minute Google Meet event is connected at https://calendly.com/expertsinvesto/30min. The Calendly API returned available slots. Ajay’s calendar remains unconnected. Existing general contact and private enquiry forms are preserved.
+
+In the authenticated Calendly event settings, the immediate calendar invitation was already enabled; email reminders were enabled for 24 hours before, and email follow-up was enabled for one hour after. The settings were saved and verified in the editor. No paid upgrade was purchased. No test appointment was created, so actual inbox delivery and cancellation/rescheduling behavior remain untested. The account currently lists only Abhishek as an organization member. Do not route Ajay’s bookings to Abhishek’s calendar.
 
 ## Account setup required
 
