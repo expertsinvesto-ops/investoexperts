@@ -1,5 +1,7 @@
 # Services & Investment Products merger
 
+Historical implementation record. The subsequent owner-requested photographic Services redesign is documented in `SERVICES-PHOTOGRAPHY.md`; its page layout supersedes the layout described below.
+
 Status: implemented locally; not deployed. Review at http://127.0.0.1:8831/services.html.
 
 ## Improvements
