@@ -33,7 +33,7 @@ Original CTA destinations remain available: stock broking, PMS, financial planni
 
 ## Navigation, routing and SEO
 
-Main and mobile navigation now read Home | About Us | Services & Products | Financial Tools | Contact Us, with Book Consultation retained. Detail pages, Insights and Private Wealth remain accessible through existing content/footer routes.
+Main and mobile navigation now read Home | About Us | Services & Products | Private Wealth | Financial Tools | Insights | Contact Us, with Book Consultation retained. Private Wealth and Insights were restored to the main menu at the owner’s request after the initial merger. The existing mobile menu is used up to 1280 px so all links remain accessible without crowding.
 
 All internal old Products page links and applicable breadcrumb URLs now point to the merged investment-products section. Existing detail-page body content was otherwise preserved by an automated comparison against pre-change copies.
 

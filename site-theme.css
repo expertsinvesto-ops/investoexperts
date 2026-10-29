@@ -18,3 +18,6 @@ footer:not(.pa-footer) .fcol h5{color:#263e69}footer:not(.pa-footer) .fcol ul a,
 
 /* One clean sans-serif family across headings and body text. */
 :root{--ff-head:'Jost',Arial,sans-serif;--ff-body:'Jost',Arial,sans-serif}h1,h2,h3,h4,h5,h6,.display,.hl,.hm,.nav-logo-text,.f-tagline{font-family:var(--ff-body)}.display,.hl,.hm,.phero-title{font-weight:600;letter-spacing:-.035em}.display em,.hero-title em,.phero-title em,.hl em,.hm em,.f-tagline{font-style:normal}.team-media{height:210px;display:flex;align-items:center;justify-content:center;margin:0 auto 22px}.team-media>div{margin:0!important}.team-portrait{display:block;width:180px;height:210px;object-fit:cover;object-position:center 35%;border-radius:16px;border:1px solid #dce5f6;box-shadow:0 8px 22px #263e6f14}.team-profile .card{min-width:0}
+
+/* Keep the full navigation readable; compact screens use the existing menu. */
+@media(max-width:1280px){#nav .nav-links{display:none}#nav .hamburger{display:flex;min-width:44px;min-height:44px;align-items:center;justify-content:center}#nav>.btn{display:none}}
